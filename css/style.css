@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* CSS Document */
+/* 滚动条样式 */
+::-webkit-scrollbar{width:12px;height:12px;background-color:#f8f8f8;} /*背景*/
+::-webkit-scrollbar-thumb:vertical{background-color:#c0c0c0;border-radius:40px;} /*滑块属性*/
+::-webkit-scrollbar-thumb:vertical:hover{background-color:#a8a8a8;}
+::-webkit-scrollbar-button:vertical{}
+::-webkit-scrollbar-track:vertical{background-color:#fff;display:none;}
+::-webkit-scrollbar-track-piece{background:#fff;display:none;}
+::-webkit-scrollbar-corner:vertical{background-color:#fff;display:none;}
+::-webkit-scrollbar-resizer:vertical{background-color:#fff;display:none;}
+ /* 初始化CSS */
+body,h1,h2,h3,h4,h5,h6,div,img,ol,ul,li,p,span,th,td,dl,dt,dd,pre,form,fieldset,input,textarea,select,input,textarea,blockquote {margin:0; padding:0;}
+img,input,textarea,fieldset,abbr,acronym {border:0;}
+img {vertical-align:top; width:100%; vert-align:top; /*移动端图片边框   相当于  border:0*/}
+input, textarea {outline:none;} /*取消chrome下默认的文本框聚焦样式*/
+ol, ul {list-style:none;}
+a {text-decoration:none;}
+p {word-wrap:break-word;}
+table {border-collapse:collapse; border-spacing:0;}
+a:focus,*:focus {outline:none;} /* 去除 ie6,7,8 焦点点状线 */
+a,input,button{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);} /*透明度设置为0，去掉点击链接和文本框对象时默认的灰色半透明覆盖层(iOS)或者虚框(Android) */
+body {
+	font: 16px 'HanHei SC', 'PingHei', 'PingFang SC', 'MicroSoft Yahei', 'STHeitiSC-Light', 'Helvetica', 'Arial', sans-serif;
+	color: #333;
+	background: #000;
+	letter-spacing: 1px;
+	overflow-x: hidden;
+	-webkit-appearance: none; /*消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式*/
+	-webkit-appearance: none; border-radius: 0; /*去掉IOS移除原生控件样式*/
+	/*-webkit-touch-callout:none;*/ /*禁用长按页面时的弹出菜单*/
+	/*-webkit-user-select: none;*/ /*禁止移动端用户进行复制.选择*/
+	-webkit-text-size-adjust: 100%; /*移动端横竖屏字体乎大乎小*/
+}
+html {height:100%;}
+img {	width:100%;background:#e8e8e8; }
+
+/*sprite*/
+/*body,div,img,h1,h2,h3,ul,li,p,span,input,textarea{margin:0; padding:0; }
+img,input,textarea{border:0; }
+ul{list-style:none; }
+input{outline:none; }
+textarea{outline:none; }
+a{text-decoration:none;}*/
+
+/*全局*/
+body{font:14px Arial,"微软雅黑"; color:#999; background:#222326;
+	display: block;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-text-size-adjust: none;
+    background-attachment: fixed;
+    background-image: url(../images/bj.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: -Scroll;
+    overflow-x: hidden;
+	z-index: -1;
+	/*filter: blur(2px);*/}
+#left{z-index:0;position:fixed; left: 0px; top: 0; width:220px; height:100%;/* background-color:#1D1D1B; background-image: linear-gradient(to bottom right,#15243E,#0A1224); */padding:45px 0 0 0; /*box-shadow: 0 10px 40px rgb(0 0 0 / 50%);*/}
+#left .logo{display:block; width:68px; height:68px; background: url("../images/logo.png") no-repeat; background-size:68px 68px; cursor: pointer; 
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+	margin-left:38px;}
+#left .logo:hover{/*background: url("../images/logoh.png") no-repeat; background-size:68px 68px;*/-webkit-filter: brightness(1.3);filter: brightness(1.3);
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+	margin-left:42px;}
+#left span{display:block; margin-top:30px; font:12px "微软雅黑"; color:#898B8E; line-height:10px; padding:6px 0 6px 40px; }
+#left a{display:block; width:120px; height:18px; padding:6px 0 6px 0; font:14px "微软雅黑";font-weight:400; color:#D1D8DB; line-height:22px; cursor: pointer; padding-left:40px;border-radius:0 25px 25px 0; 
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+	}
+#left a:hover{color:#3effb8;width:140px;background:rgba(255,255,255,.03);
+-webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+	}
+h1{font-size:16px; color:#3effb8; margin-top:0px; padding:119px 0 50px 22px; font-weight: 600; }
+h2{font-size:16px; color:#b2b2b2; margin:6px 0 0 14px; font-weight: 400; }
+h3{font-size:14px; color:#666; margin:4px 0 0 14px; font-weight: 400;}
+#wrapper{ margin:0 0 0 240px; }
+#wrapper ul{overflow:hidden; }
+#wrapper li{float:left; width:520px; height:390px; margin:10px 22px 50px 22px;border-radius: 12px;}
+#wrapper li a{display:inline-block; width:100%; height:100%; text-decoration: none;border-radius: 12px;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+	margin-top: 5px;
+	}
+#wrapper a:hover{
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+	margin-top: 0;
+    }
+#wrapper li img{width:100%; height:100%;border-radius: 12px;background:#222326; }
+.zhezhao {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background: transparent url(/images/pattern_pc.png) repeat top left;
+	opacity: 0.2;
+    z-index: -1;
+}
