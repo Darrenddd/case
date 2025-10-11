@@ -1,0 +1,44 @@
+
+*,*::before,*::after {margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+/*【圖片和多媒體元素】設置為塊級元素，自動縮放以適應其容器*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*【表單元素】繼承父元素的字體設置*/
+input, button, textarea, select {
+  font: inherit; /* 繼承字體 */
+}
+/*【按鈕】在鼠標懸停時顯示為指針樣式，去除 瀏覽器對按鈕的默認 邊框 背景顏色*/
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+/*【超鏈接】的顏色繼承自父元素的顏色，去除 下劃線*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/*【有序和無序列表】去除掉 預設標記 內邊距 外邊距*/
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/*【表格】去除掉單元格之間的 空隙*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*去除 元素在獲得焦點時的默認 輪廓線*/
+:focus {
+  outline: none; /* 若需要可自行加 :focus-visible */
+}

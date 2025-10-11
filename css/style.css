@@ -1,50 +1,23 @@
 @charset "utf-8";
 /* CSS Document */
-/* 滚动条样式 */
-::-webkit-scrollbar{width:12px;height:12px;background-color:#f8f8f8;} /*背景*/
-::-webkit-scrollbar-thumb:vertical{background-color:#c0c0c0;border-radius:40px;} /*滑块属性*/
-::-webkit-scrollbar-thumb:vertical:hover{background-color:#a8a8a8;}
-::-webkit-scrollbar-button:vertical{}
-::-webkit-scrollbar-track:vertical{background-color:#fff;display:none;}
-::-webkit-scrollbar-track-piece{background:#fff;display:none;}
-::-webkit-scrollbar-corner:vertical{background-color:#fff;display:none;}
-::-webkit-scrollbar-resizer:vertical{background-color:#fff;display:none;}
  /* 初始化CSS */
-body,h1,h2,h3,h4,h5,h6,div,img,ol,ul,li,p,span,th,td,dl,dt,dd,pre,form,fieldset,input,textarea,select,input,textarea,blockquote {margin:0; padding:0;}
-img,input,textarea,fieldset,abbr,acronym {border:0;}
-img {vertical-align:top; width:100%; vert-align:top; /*移动端图片边框   相当于  border:0*/}
-input, textarea {outline:none;} /*取消chrome下默认的文本框聚焦样式*/
-ol, ul {list-style:none;}
-a {text-decoration:none;}
-p {word-wrap:break-word;}
-table {border-collapse:collapse; border-spacing:0;}
-a:focus,*:focus {outline:none;} /* 去除 ie6,7,8 焦点点状线 */
-a,input,button{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);} /*透明度设置为0，去掉点击链接和文本框对象时默认的灰色半透明覆盖层(iOS)或者虚框(Android) */
-body {
-	font: 16px 'HanHei SC', 'PingHei', 'PingFang SC', 'MicroSoft Yahei', 'STHeitiSC-Light', 'Helvetica', 'Arial', sans-serif;
-	color: #333;
-	background: #000;
-	letter-spacing: 1px;
-	overflow-x: hidden;
-	-webkit-appearance: none; /*消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式*/
-	-webkit-appearance: none; border-radius: 0; /*去掉IOS移除原生控件样式*/
-	/*-webkit-touch-callout:none;*/ /*禁用长按页面时的弹出菜单*/
-	/*-webkit-user-select: none;*/ /*禁止移动端用户进行复制.选择*/
-	-webkit-text-size-adjust: 100%; /*移动端横竖屏字体乎大乎小*/
-}
-html {height:100%;}
-img {	width:100%;background:#e8e8e8; }
 
-/*sprite*/
-/*body,div,img,h1,h2,h3,ul,li,p,span,input,textarea{margin:0; padding:0; }
-img,input,textarea{border:0; }
-ul{list-style:none; }
-input{outline:none; }
-textarea{outline:none; }
-a{text-decoration:none;}*/
+a,input,button{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);} /*透明度设置为0，去掉点击链接和文本框对象时默认的灰色半透明覆盖层(iOS)或者虚框(Android) */
+html, body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  background-color: #222326;
+  color: #999;
+}
+body {
+	-webkit-appearance: none; /*消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式*/
+	appearance: none; border-radius: 0; /*去掉IOS移除原生控件样式*/
+	text-size-adjust: 100%; /*移动端横竖屏字体乎大乎小*/
+}
 
 /*全局*/
-body{font:14px Arial,"微软雅黑"; color:#999; background:#222326;
+body{
 	display: block;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -76,8 +49,8 @@ body{font:14px Arial,"微软雅黑"; color:#999; background:#222326;
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
 	margin-left:42px;}
-#left span{display:block; margin-top:30px; font:12px "微软雅黑"; color:#898B8E; line-height:10px; padding:6px 0 6px 40px; }
-#left a{display:block; width:120px; height:18px; padding:6px 0 6px 0; font:14px "微软雅黑";font-weight:400; color:#D1D8DB; line-height:18px; cursor: pointer; padding-left:40px;border-radius:0 25px 25px 0; 
+#left span{display:block; margin-top:30px; font:12px; color:#898B8E;padding-left: 40px; }
+#left a{display:block; margin-right:20px; padding-left: 40px; font:14px;font-weight:800; color:#D1D8DB;  cursor: pointer; border-radius:0 25px 25px 0; 
 	-webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -85,7 +58,7 @@ body{font:14px Arial,"微软雅黑"; color:#999; background:#222326;
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
 	}
-#left a:hover{color:#3effb8;width:140px;background:rgba(255,255,255,.03);
+#left a:hover{color:#3effb8;background:rgba(255,255,255,.03);
 -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
