@@ -48,6 +48,6 @@ table {
   outline: none; /* 若需要可自行加 :focus-visible */
 }
 /*透明度设置为0，去掉点击链接和文本框对象时默认的灰色半透明覆盖层(iOS)或者虚框(Android) */
-/* a,input,button{
+a,input,button{
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-} */
+}
