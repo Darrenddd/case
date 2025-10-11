@@ -1,11 +1,13 @@
-
 *,*::before,*::after {margin: 0; padding: 0; box-sizing: border-box; }
-
-html, body {
+html{
   height: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+}
+body{
+  height: 100%;
+  -webkit-font-smoothing: antialiased; /*字体看着更平滑*/
+  -moz-osx-font-smoothing: grayscale; /*字体看着更平滑*/
+  -webkit-text-size-adjust: none;/*移动端横竖屏字体乎大乎小，兼容老版本iOS 或 Android 设备*/
+  text-size-adjust: none; /*移动端横竖屏字体乎大乎小*/
 }
 /*【圖片和多媒體元素】設置為塊級元素，自動縮放以適應其容器*/
 img, picture, video, canvas, svg {
@@ -15,6 +17,9 @@ img, picture, video, canvas, svg {
 /*【表單元素】繼承父元素的字體設置*/
 input, button, textarea, select {
   font: inherit; /* 繼承字體 */
+	-webkit-appearance: none; /*兼容老版本iOS 或 Android 设备*/
+	appearance: none; /*消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式*/
+  border-radius: 0; /*去掉IOS移除原生控件样式*/
 }
 /*【按鈕】在鼠標懸停時顯示為指針樣式，去除 瀏覽器對按鈕的默認 邊框 背景顏色*/
 button {
@@ -42,3 +47,7 @@ table {
 :focus {
   outline: none; /* 若需要可自行加 :focus-visible */
 }
+/*透明度设置为0，去掉点击链接和文本框对象时默认的灰色半透明覆盖层(iOS)或者虚框(Android) */
+/* a,input,button{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+} */

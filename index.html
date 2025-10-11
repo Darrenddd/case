@@ -12,23 +12,22 @@
 <body>
 
 <div id="left">
-	<div class="logo scroll-top"></div>
+	<!-- 将 logo 的 scroll-top 功能独立出来，不作为 nav-link 处理 -->
+	<!-- 移除 nav-link 类，添加 id="logo-link" 便于特定处理 -->
+	<div class="logo" id="logo-link"></div> 
 	<ul>
 		<li><span>UI交互</span></li>
-		<li class="scroll-onea"><a>移动APP</a></li>
-		<li class="scroll-oneb"><a>小程序</a></li>
-		<li class="scroll-onec"><a>企业官网</a></li>
-		<li class="scroll-oned"><a>PC软件</a></li>
-		<li class="scroll-onee"><a>服务终端</a></li>
+		<li><a class="nav-link scroll-onea">移动APP</a></li>
+		<li><a class="nav-link scroll-oneb">小程序</a></li>
+		<li><a class="nav-link scroll-onec">企业官网</a></li>
+		<li><a class="nav-link scroll-oned">PC软件</a></li>
 		<li><span>物料宣传</span></li>
-		<li class="scroll-twoa"><a>海报/展板</a></li>
-		<li class="scroll-twob"><a>折页/画册</a></li>
-		<li class="scroll-twoc"><a>名片/DM单</a></li>
-		<li class="scroll-twod"><a>产品包装</a></li>
+		<li><a class="nav-link scroll-twoa">海报/展板</a></li>
+		<li><a class="nav-link scroll-twob">折页/画册</a></li>
+		<li><a class="nav-link scroll-twoc">名片/DM单</a></li>
 		<li><span>活动营销</span></li>
-		<li class="scroll-threea"><a>H5专题活动</a></li>
-		<li class="scroll-threeb"><a>Banner广告图</a></li>
-		<li class="scroll-threec"><a>微信抖音</a></li>
+		<li><a class="nav-link scroll-threea">H5专题活动</a></li>
+		<li><a class="nav-link scroll-threeb">Banner广告图</a></li>
 	</ul>
 </div>
 <div id="wrapper">
@@ -43,8 +42,8 @@
 		<li><a href="images/app/chongba/chongba.html" target="_blank"><img src="images/app/chongba/chongba.jpg" /></a></li>
 		<li><a href="images/app/DynasynQ/DynasynQ.html" target="_blank"><img src="images/app/DynasynQ/DynasynQ.jpg" /></a></li>
 		<li><a href="images/app/hengzhi/hengzhi.html" target="_blank"><img src="images/app/hengzhi/hengzhi.jpg" /></a></li>
-		<li><a href="images/app/mengxiong/mengxiong.html" target="_blank"><img src="images/app/mengxiong/mengxiong.jpg" /></a></li>
-		<li><a href="images/app/3Dcar/3Dcar.html" target="_blank"><img src="images/app/3Dcar/3Dcar.jpg" /></a></li>
+		<li><a href="images/app/mengxiong/mengxiong.jpg" target="_blank"><img src="images/app/mengxiong/mengxiong.jpg" /></a></li>
+		<li><a href="images/app/3Dcar/3Dcar.html" target="_blank"><img src="images/app/3Dcar/17.png" /></a></li>
 		<li><a href="images/app/pos/pos.html" target="_blank"><img src="images/app/pos/pos.jpg" /></a></li>
 	</ul>
 	<h1 class="oneb">小程序</h1>
@@ -67,9 +66,6 @@
 	<h1 class="oned">PC软件</h1>
 	<ul>
 		<li><a href="images/software/AIdudao/AIdudao.html" target="_blank"><img src="images/software/AIdudao/AIdudao.jpg" /></a></li>
-	</ul>
-	<h1 class="onee">服务终端</h1>
-	<ul>
 		<li><a href="images/service/Chevrolet/Chevrolet.html" target="_blank"><img src="images/service/Chevrolet/Chevrolet.jpg" /></a></li>
 		<li><a href="images/service/iFLYTEK/iFLYTEK.html" target="_blank"><img src="images/service/iFLYTEK/iFLYTEK.jpg" /></a></li>
 	</ul>
@@ -111,17 +107,7 @@
 		<li><a href="images/shop/img002.html" target="_blank"><img src="images/shop/img002-s.jpg" /></a></li>
 		<li><a href="images/shop/img001.html" target="_blank"><img src="images/shop/img001-s.jpg" /></a></li>
 	</ul>
-
-	<h1 class="twoc">产品包装</h1>
-	<ul>
-		<li><a href="images/news/img006.html" target="_blank"><img src="images/news/img006-s.jpg" /></a></li>
-		<li><a href="images/news/img005.html" target="_blank"><img src="images/news/img005-s.jpg" /></a></li>
-		<li><a href="images/news/img004.html" target="_blank"><img src="images/news/img004-s.jpg" /></a></li>
-		<li><a href="images/news/img003.html" target="_blank"><img src="images/news/img003-s.jpg" /></a></li>
-		<li><a href="images/news/img002.html" target="_blank"><img src="images/news/img002-s.jpg" /></a></li>
-		<li><a href="images/news/img001.html" target="_blank"><img src="images/news/img001-s.jpg" /></a></li>
-	</ul>
-	<h1 class="twod">名片</h1>
+	<h1 class="twoc">名片</h1>
 	<ul>
 		<li><a href="images/news/img006.html" target="_blank"><img src="images/news/img006-s.jpg" /></a></li>
 		<li><a href="images/news/img005.html" target="_blank"><img src="images/news/img005-s.jpg" /></a></li>
@@ -162,41 +148,132 @@
 
 </div>
 
-<script type="text/javascript">
-	//缓动跳转
-	jQuery(document).ready(function($){
-	$('.scroll-top').click(function(){$('html,body').animate({scrollTop: '0px'}, 500);}); //缓动到顶部
+<script type="text/javascript">    
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('#left .nav-link');
+        const logoLink = document.getElementById('logo-link');
+        const $window = $(window);
+        const $htmlBody = $('html,body');
 
-	$('.scroll-onea').click(function(){$('html,body').animate({scrollTop:$('.onea').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-oneb').click(function(){$('html,body').animate({scrollTop:$('.oneb').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-onec').click(function(){$('html,body').animate({scrollTop:$('.onec').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-oned').click(function(){$('html,body').animate({scrollTop:$('.oned').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-onee').click(function(){$('html,body').animate({scrollTop:$('.onee').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-onef').click(function(){$('html,body').animate({scrollTop:$('.onef').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-oneg').click(function(){$('html,body').animate({scrollTop:$('.oneg').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-oneh').click(function(){$('html,body').animate({scrollTop:$('.oneh').offset().top}, 500);}); //缓动到选择器
+        const setActiveLink = (elementToActivate) => {
+            console.log("setActiveLink called. Element to activate:", elementToActivate ? elementToActivate.textContent || elementToActivate.id : "null");
+            navLinks.forEach(item => {
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    console.log("Removed active from:", item.textContent || item.id);
+                }
+            });
+            if (logoLink && logoLink.classList.contains('active')) {
+                logoLink.classList.remove('active');
+                console.log("Removed active from logo.");
+            }
 
-	$('.scroll-twoa').click(function(){$('html,body').animate({scrollTop:$('.twoa').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-twob').click(function(){$('html,body').animate({scrollTop:$('.twob').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-twoc').click(function(){$('html,body').animate({scrollTop:$('.twoc').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-twod').click(function(){$('html,body').animate({scrollTop:$('.twod').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-twoe').click(function(){$('html,body').animate({scrollTop:$('.twoe').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-twof').click(function(){$('html,body').animate({scrollTop:$('.twof').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-twog').click(function(){$('html,body').animate({scrollTop:$('.twog').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-twoh').click(function(){$('html,body').animate({scrollTop:$('.twoh').offset().top}, 500);}); //缓动到选择器
+            if (elementToActivate) {
+                elementToActivate.classList.add('active');
+                console.log("Added active to:", elementToActivate.textContent || elementToActivate.id);
+            }
+        };
 
-	$('.scroll-threea').click(function(){$('html,body').animate({scrollTop:$('.threea').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-threeb').click(function(){$('html,body').animate({scrollTop:$('.threeb').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-threec').click(function(){$('html,body').animate({scrollTop:$('.threec').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-threed').click(function(){$('html,body').animate({scrollTop:$('.threed').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-threee').click(function(){$('html,body').animate({scrollTop:$('.threee').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-threef').click(function(){$('html,body').animate({scrollTop:$('.threef').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-threeg').click(function(){$('html,body').animate({scrollTop:$('.threeg').offset().top}, 500);}); //缓动到选择器
-	$('.scroll-threeh').click(function(){$('html,body').animate({scrollTop:$('.threeh').offset().top}, 500);}); //缓动到选择器
+        const sections = [];
+        navLinks.forEach(link => {
+            const classList = link.classList;
+            let targetClass = '';
+            for (let cls of classList) {
+                if (cls.startsWith('scroll-')) {
+                    targetClass = '.' + cls.replace('scroll-', '');
+                    break;
+                }
+            }
 
-	$('.scroll-bottom').click(function(){$('html,body').animate({scrollTop:$('.bottom').offset().top}, 500);}); //缓动到底部
-	});
+            if (targetClass && $(targetClass).length) {
+                const sectionElement = $(targetClass);
+                sections.push({
+                    linkElement: link,
+                    sectionElement: sectionElement
+                });
+                console.log(`Mapped: NavLink(${link.textContent}) to Section(${targetClass}) at Top: ${sectionElement.offset().top}`);
+            } else {
+                console.warn(`NavLink(${link.textContent}) could not find corresponding section with class: ${targetClass}`);
+            }
+        });
+
+        // ===========================================
+        // 1. 左侧菜单点击事件（保持不变）
+        // ===========================================
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                setActiveLink(this);
+
+                const classList = this.classList;
+                let targetClass = '';
+                for (let cls of classList) {
+                    if (cls.startsWith('scroll-')) {
+                        targetClass = '.' + cls.replace('scroll-', '');
+                        break;
+                    }
+                }
+
+                if (targetClass && $(targetClass).length) {
+                    const targetOffset = $(targetClass).offset().top;
+                    console.log(`Click: Scrolling to ${targetClass} at ${targetOffset}px`);
+                    $htmlBody.stop().animate({
+                        scrollTop: targetOffset
+                    }, 500);
+                }
+            });
+        });
+
+        if (logoLink) {
+            logoLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                setActiveLink(null);
+                console.log("Click: Scrolling to top (logo).");
+                $htmlBody.stop().animate({scrollTop: '0px'}, 500);
+            });
+        }
+
+        // ===========================================
+        // 2. 滚动监听事件
+        // ===========================================
+        let scrollTimeout;
+        const scrollHandler = () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const currentScrollTop = $window.scrollTop();
+                const offsetThreshold = 500; // 再次确认这个值是否合适
+
+                console.log(`Scroll: currentScrollTop = ${currentScrollTop}`);
+
+                let currentActiveLink = null;
+
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    const section = sections[i];
+                    const sectionTop = section.sectionElement.offset().top;
+                    console.log(`  Checking: NavLink(${section.linkElement.textContent}), Section(${section.sectionElement.attr('class')}), Top: ${sectionTop}`);
+                    if (currentScrollTop + offsetThreshold >= sectionTop) {
+                        currentActiveLink = section.linkElement;
+                        console.log(`  Match found! Activating: NavLink(${currentActiveLink.textContent})`);
+                        break; 
+                    }
+                }
+
+                if (currentActiveLink) {
+                    if (!currentActiveLink.classList.contains('active')) {
+                        console.log("Scroll: Active link changed.");
+                        setActiveLink(currentActiveLink);
+                    }
+                } else if (currentScrollTop === 0) {
+                    console.log("Scroll: Reached top, clearing active.");
+                    setActiveLink(null);
+                }
+            }, 100);
+        };
+
+        $window.on('scroll', scrollHandler);
+        scrollHandler(); 
+    });
 </script>
-<div class="zhezhao"></div>
+<div class="mask"></div>
 </body>
 </html>
