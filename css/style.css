@@ -52,7 +52,6 @@ body{
 }
 #left a{
     display:block;
-    margin-bottom:3px;
     padding:4px 40px 4px 40px;
     font-size: 1.2rem;
     font-weight:800;
@@ -70,7 +69,7 @@ body{
 /* 点击后（活跃）的样式 */
 #left .nav-link.active {
     color:var(--primary-color);
-    background: #4A4B50; 
+    background:rgba(255,255,255,.1);
     transition: all 0.3s ease-in-out;
     /* box-shadow: inset 5px 0 0 var(--primary-color);  */
     /* margin-right: 0; 修正因为box-shadow导致的宽度问题，或者调整内边距 */
