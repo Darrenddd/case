@@ -16,120 +16,168 @@ body{
     background: var(--background-dark) url(../images/bj.png) center center no-repeat fixed;
     background-size: cover;
 }
-#left{
-    z-index:100;
-    position:fixed;
-    left: 0;
-    top: 0;
-    /* width:200px; */
-    height:100%;
-    padding:0 40px 0 0;
-    background-color: #33505d00;
-    /*box-shadow: 0 10px 40px rgb(0 0 0 / 50%);*/
+/* 1. 外层 Grid：定义左右两栏的宏观结构 */
+.page-container {
+  display: grid;
+  /* 15rem 给侧边栏，1fr 给主内容区 */
+  grid-template-columns: 15rem 1fr;
 }
-#left .logo{
-    display:block;
-    margin:60px 0 30px 40px;
-    width:68px;
-    height:68px;
-    border-radius: 36%; 
+/*侧边栏*/
+.sidebar {
+    display: flex;
+    flex-direction: column; /* 设置主轴为垂直方向 */
+    align-items: flex-start; /* 交叉轴（水平）从左侧开始对齐 */
+
+    /* 1. 启用粘性定位 */
+    position: sticky;   
+    /* 2. 规定它“粘住”的位置 */
+    top: 0; /* 当滚动到距离视口顶部0px时，它就开始固定 */  
+    /* 确保侧边栏的高度能覆盖内容区（如果内容区很长） */
+    height: 100vh; /* 视口高度的100% */
+
+    /* padding:0 40px 0 0; */
+    background-color: #33505d00;
+    /* box-shadow: 0 0.7rem 2.5rem rgb(0 0 0 / 50%); */
+}
+.sidebar .logo{
+    margin:3.75rem 0 0.7rem 2.5rem;
+    width:4.25rem;
+    height:4.25rem;
+    border-radius: 40%; 
     background: url("../images/logo.png") no-repeat;
     background-color: var(--primary-color);
-    background-size:68px 68px;
+    background-size:4.25rem 4.25rem;
     /* cursor: pointer;  */
 	transition: all 0.3s ease-in-out;
 }
-#left .logo:hover{
+.sidebar .logo:hover{
     /*background: url("../images/logoh.png") no-repeat; background-size:68px 68px;*/
     filter: brightness(1.1);
 	transition: all 0.3s ease-in-out;
-	margin-left:44px;
+	margin-left:2.75rem;
 }
-#left span{
-    display:block;
-    margin-top:20px;
-    font-size:14px;
+.sidebar span{
+    margin-top:1.25rem;
+    font-size:0.9rem;
     color:var(--text-left-group);
-    padding:4px 0 4px 40px;
+    padding:0.25rem 0 0.25rem 0;
+    padding-left: 2.5rem;
 }
-#left a{
-    display:block;
-    padding:4px 40px 4px 40px;
+.sidebar a{
+    width: 12rem;
+    padding:0.25rem 0 0.25rem 0;
+    padding-left: 2.5rem;
     font-size: 1.1rem;
     font-weight:800;
     color:var(--text-left-menu);
     cursor: pointer;
-    border-radius:0 25px 25px 0; 
+    border-radius:0 2rem 2rem 0; 
 	transition: all 0.3s ease-in-out;
 }
-#left a:hover{
+.sidebar a:hover{
     color: #fff;
     /* color:var(--primary-color); */
-    /* background:rgba(255,255,255,.07); */
-    transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 /* 点击后（活跃）的样式 */
-#left .nav-link.active {
+.sidebar .nav-link.active {
     font-size: 1.3rem;
     color:var(--primary-color);
-    background:rgba(255,255,255,.1);
+    margin: 0.15rem 0 0.15rem 0;
+    background:rgba(255,255,255,.2);
     transition: all 0.3s ease-in-out;
     /* box-shadow: inset 5px 0 0 var(--primary-color);  */
     /* margin-right: 0; 修正因为box-shadow导致的宽度问题，或者调整内边距 */
     /* padding-left: 35px; 调整内边距以适应左侧边框 */
 }
+
+
+/*右侧主内容区*/
+.content-grid {
+  display: grid;
+  /*
+   * 核心代码:
+   * auto-fit: 自动填充，尽可能多地在一行内容纳列。
+   * minmax(300px, 1fr): 每个卡片的最小宽度是300px，最大宽度是1份（平分剩余空间）。
+   * 当屏幕宽度无法容纳两个300px的卡片时，它会自动变成单列。
+   */
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem; /* 卡片之间的间距 */
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
 h1{
-    font-size:18px;
+    font-size:2rem;
     color:var(--primary-color);
-    padding:119px 0 50px 22px;
-    font-weight: 600;
+    padding:7rem 0 4rem 0;
+    font-weight: 800;
+    padding-left: 4%;
 }
-/* h2{font-size:16px; color:#b2b2b2; margin:6px 0 0 14px; font-weight: 400; }
-h3{font-size:14px; color:#666; margin:4px 0 0 14px; font-weight: 400;} */
-/*内容区域在右侧,给左侧导航留出位置*/
-#wrapper{
-    margin:0 0 0 240px;
+
+main li{
+    margin-bottom: 4rem;
 }
-/*经典的清除浮动,考虑使用 Flexbox 或 Grid 来布局,或更通用的 clearfix 类*/
-#wrapper ul{
-    display: flex; /* 将 ul 设置为 Flex 容器 */
-    flex-wrap: wrap; /* 允许 li 元素在空间不足时换行 */
-    /* 可以选择性地添加一些间距控制，例如 gap 属性 */
-    /* gap: 10px; 或 row-gap: 10px; column-gap: 22px; */
-}
-#wrapper li{
-    width:520px;
-    height:390px;
-    margin:10px 22px 50px 22px;
-    border-radius: 12px;
-}
-#wrapper li a{
+
+main li a{
     display:block;
     width:100%;
     height:100%;
-    border-radius: 12px;
+    border-radius: 1.5rem;
 	transition: all 0.3s ease-in-out;
-	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
-	margin-top: 5px;
+	box-shadow: 0 1.25rem 1.25rem rgba(0, 0, 0, 0.1);
+	margin-top: 0.4rem;
 	}
-#wrapper li a:hover{
+main li a:hover{
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.4);
+    /* width: 32rem; */
 	margin-top: 0;
+    filter: brightness(0.7);
     }
-#wrapper li img{
+main li img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius:12px;
+    border-radius:1.5rem;
 }
 .mask {
     width: 100%;
     height: 100%;
     position: fixed;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     background: transparent url(../images/pattern_pc.png) repeat top left;
 	opacity: 0.2;
     z-index: -1;
+}
+
+/* ------------------------------------------- */
+/* 媒体查询：适用于 平板 和 手机 (小于 768px) */
+/* ------------------------------------------- */
+@media (max-width: 768px) { 
+    
+    /* 1. 外层 Grid：改为单列堆叠 */
+    .page-container {
+        grid-template-columns: 1fr; 
+    }
+    
+    /* 2. 侧边栏 FIX：移除固定定位，使其正常堆叠 */
+    .sidebar {
+        position: static; 
+        height: auto; 
+        /* 手机上可以考虑将导航项居中 */
+        align-items: center; 
+        /* padding-left: 0; */
+    }
+    .sidebar a{
+        text-align: center;
+    }
+    /* 4. 内容区 Grid FIX：确保在小屏幕上，卡片即使只剩一列，也完全填满左右空间 */
+    .content-grid {
+        /* KEY FIX: 
+           当宽度很小时，将 minmax 的最小值设为 0（或 100px），
+           让 1fr 完全占据所有可用宽度，消除空白。 */
+        grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr)); 
+    }
 }
