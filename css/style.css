@@ -4,7 +4,7 @@
   --background-dark: #222326;
   --text-light: #999;
   --text-left-group:#898B8E;
-  --text-left-menu:#afb6b8;
+  --text-left-menu:#c4cacc;
   /* ... */
 }
 body{
@@ -14,6 +14,7 @@ body{
     line-height: 1.5;
     color: var(--text-light);
     background: var(--background-dark) url(../images/bj.png) center center no-repeat fixed;
+    /* background: var(--background-dark) url(../images/bj2.png) center center no-repeat fixed; */
     background-size: cover;
 }
 /* 1. 外层 Grid：定义左右两栏的宏观结构 */
@@ -81,10 +82,13 @@ body{
 }
 /* 点击后（活跃）的样式 */
 .sidebar .nav-link.active {
+    /* height: 15rem; */
     font-size: 1.3rem;
     color:var(--primary-color);
     margin: 0.15rem 0 0.15rem 0;
-    background:rgba(255,255,255,.2);
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    background:rgba(255,255,255,.1);
     transition: all 0.3s ease-in-out;
     /* box-shadow: inset 5px 0 0 var(--primary-color);  */
     /* margin-right: 0; 修正因为box-shadow导致的宽度问题，或者调整内边距 */
@@ -93,18 +97,30 @@ body{
 
 
 /*右侧主内容区*/
+
+/*自我介绍*/
+.about-container{
+    width: 100%;
+    height: 100vh;
+    /* background-color: #7bd3e9; */
+}
+
+
+
+/*内容图片列表*/
 .content-grid {
-  display: grid;
-  /*
-   * 核心代码:
-   * auto-fit: 自动填充，尽可能多地在一行内容纳列。
-   * minmax(300px, 1fr): 每个卡片的最小宽度是300px，最大宽度是1份（平分剩余空间）。
-   * 当屏幕宽度无法容纳两个300px的卡片时，它会自动变成单列。
-   */
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 2rem; /* 卡片之间的间距 */
-  padding-left: 4%;
-  padding-right: 4%;
+    display: grid;
+    /*
+    * 核心代码:
+    * auto-fit: 自动填充，尽可能多地在一行内容纳列。
+    * minmax(300px, 1fr): 每个卡片的最小宽度是300px，最大宽度是1份（平分剩余空间）。
+    * 当屏幕宽度无法容纳两个300px的卡片时，它会自动变成单列。
+    */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem; /* 卡片之间的间距 */
+    padding-left: 4%;
+    padding-right: 4%;
+
 }
 
 h1{
@@ -114,7 +130,6 @@ h1{
     font-weight: 800;
     padding-left: 4%;
 }
-
 main li{
     margin-bottom: 4rem;
 }
@@ -122,8 +137,10 @@ main li{
 main li a{
     display:block;
     width:100%;
-    height:100%;
-    border-radius: 1.5rem;
+    /* height:100%; */
+    /* 关键：设置宽高比为 4 宽 / 3 高 */
+    aspect-ratio: 4 / 3;
+    border-radius: 1.2rem;
 	transition: all 0.3s ease-in-out;
 	box-shadow: 0 1.25rem 1.25rem rgba(0, 0, 0, 0.1);
 	margin-top: 0.4rem;
@@ -139,7 +156,7 @@ main li img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius:1.5rem;
+    border-radius:1.2rem;
 }
 .mask {
     width: 100%;
@@ -148,20 +165,18 @@ main li img{
     top: 0;
     right: 0;
     background: transparent url(../images/pattern_pc.png) repeat top left;
-	opacity: 0.2;
+	opacity: 0.8;
     z-index: -1;
 }
 
 /* ------------------------------------------- */
 /* 媒体查询：适用于 平板 和 手机 (小于 768px) */
 /* ------------------------------------------- */
-@media (max-width: 768px) { 
-    
+@media (max-width: 768px) {     
     /* 1. 外层 Grid：改为单列堆叠 */
     .page-container {
         grid-template-columns: 1fr; 
-    }
-    
+    }    
     /* 2. 侧边栏 FIX：移除固定定位，使其正常堆叠 */
     .sidebar {
         position: static; 
@@ -179,5 +194,8 @@ main li img{
            当宽度很小时，将 minmax 的最小值设为 0（或 100px），
            让 1fr 完全占据所有可用宽度，消除空白。 */
         grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr)); 
+        gap: 1rem; /* 卡片之间的间距 */
+        padding-left: 6%;
+        padding-right: 6%;
     }
 }

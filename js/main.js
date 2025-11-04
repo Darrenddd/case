@@ -1,0 +1,127 @@
+// 左侧边栏导航菜单和右侧分类列表图片相关联
+// 当点击左侧导航时，右侧滚动到相应位置
+// 当滚动右侧内容里，左侧选中相应的导航菜单
+document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        const logoLink = document.getElementById('logo-link');
+        const $window = $(window);
+        const $htmlBody = $('html,body');
+
+        const setActiveLink = (elementToActivate) => {
+            console.log("setActiveLink called. Element to activate:", elementToActivate ? elementToActivate.textContent || elementToActivate.id : "null");
+            navLinks.forEach(item => {
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    console.log("Removed active from:", item.textContent || item.id);
+                }
+            });
+            if (logoLink && logoLink.classList.contains('active')) {
+                logoLink.classList.remove('active');
+                console.log("Removed active from logo.");
+            }
+
+            if (elementToActivate) {
+                elementToActivate.classList.add('active');
+                console.log("Added active to:", elementToActivate.textContent || elementToActivate.id);
+            }
+        };
+
+        const sections = [];
+        navLinks.forEach(link => {
+            const classList = link.classList;
+            let targetClass = '';
+            for (let cls of classList) {
+                if (cls.startsWith('scroll-')) {
+                    targetClass = '.' + cls.replace('scroll-', '');
+                    break;
+                }
+            }
+
+            if (targetClass && $(targetClass).length) {
+                const sectionElement = $(targetClass);
+                sections.push({
+                    linkElement: link,
+                    sectionElement: sectionElement
+                });
+                console.log(`Mapped: NavLink(${link.textContent}) to Section(${targetClass}) at Top: ${sectionElement.offset().top}`);
+            } else {
+                console.warn(`NavLink(${link.textContent}) could not find corresponding section with class: ${targetClass}`);
+            }
+        });
+
+        // ===========================================
+        // 1. 左侧菜单点击事件（保持不变）
+        // ===========================================
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                setActiveLink(this);
+
+                const classList = this.classList;
+                let targetClass = '';
+                for (let cls of classList) {
+                    if (cls.startsWith('scroll-')) {
+                        targetClass = '.' + cls.replace('scroll-', '');
+                        break;
+                    }
+                }
+
+                if (targetClass && $(targetClass).length) {
+                    const targetOffset = $(targetClass).offset().top;
+                    console.log(`Click: Scrolling to ${targetClass} at ${targetOffset}px`);
+                    $htmlBody.stop().animate({
+                        scrollTop: targetOffset
+                    }, 500);
+                }
+            });
+        });
+
+        if (logoLink) {
+            logoLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                setActiveLink(null);
+                console.log("Click: Scrolling to top (logo).");
+                $htmlBody.stop().animate({scrollTop: '0px'}, 500);
+            });
+        }
+
+        // ===========================================
+        // 2. 滚动监听事件
+        // ===========================================
+        let scrollTimeout;
+        const scrollHandler = () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const currentScrollTop = $window.scrollTop();
+                const offsetThreshold = 500; // 再次确认这个值是否合适
+
+                console.log(`Scroll: currentScrollTop = ${currentScrollTop}`);
+
+                let currentActiveLink = null;
+
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    const section = sections[i];
+                    const sectionTop = section.sectionElement.offset().top;
+                    console.log(`  Checking: NavLink(${section.linkElement.textContent}), Section(${section.sectionElement.attr('class')}), Top: ${sectionTop}`);
+                    if (currentScrollTop + offsetThreshold >= sectionTop) {
+                        currentActiveLink = section.linkElement;
+                        console.log(`  Match found! Activating: NavLink(${currentActiveLink.textContent})`);
+                        break; 
+                    }
+                }
+
+                if (currentActiveLink) {
+                    if (!currentActiveLink.classList.contains('active')) {
+                        console.log("Scroll: Active link changed.");
+                        setActiveLink(currentActiveLink);
+                    }
+                } else if (currentScrollTop === 0) {
+                    console.log("Scroll: Reached top, clearing active.");
+                    setActiveLink(null);
+                }
+            }, 100);
+        };
+
+        $window.on('scroll', scrollHandler);
+        scrollHandler(); 
+    });
