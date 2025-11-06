@@ -3,7 +3,7 @@
 .fixed-header {
     position: fixed;
     width: 100%;
-    height: 3rem; 
+    height: 3.5rem; 
     z-index: 100;		
     /* 顶部半黑模糊效果 */
     background-color: rgba(29, 29, 31, .8);; 
@@ -35,6 +35,10 @@
     /* 核心微调：将 SVG 垂直下移一点，与文字视觉中心对齐 */
     /* 使用 relative 定位或 transform 微调，这里用 transform 更简洁 */
     transform: translateY(1px);
+}
+.title_display{
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, .8);
 }
 /*头像*/
 .avatar{
