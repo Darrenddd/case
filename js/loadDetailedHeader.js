@@ -1,3 +1,4 @@
+/*加载根目录下DetailedHeader.html文件到<header>标签中*/
 fetch('/DetailedHeader.html') 
   .then(response => response.text())
   .then(data => {
