@@ -5,34 +5,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Design Case</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-	<link rel="stylesheet" href="../../../css/reset.css">
-	<link rel="stylesheet" href="../../../css/DetailedHeader.css">
-	<script src="../../../js/loadDetailedHeader.js"></script>
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/DetailedHeader.css">
+	<!-- 这个loadDetailedHeader.js要先执行，目的是为了刚进去就加载头部文件，体验好一些，也是因为这个js只是加载文件，不用判断其它资源，所以可以先加载 -->
+	<script src="/js/loadDetailedHeader.js"></script>
 </head>
 <body>
-	<!-- 这里用JS加载文件 -->
-	<header>
-    </header>
+	<!-- 这里用JS加载文件到这个<header>标签 -->
+	<header></header>
 	<main>
-		<img src="1.png" alt="">
-		<img src="../../../images/placeholder.png" data-src="2.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="3.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="4.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="5.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="6.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="7.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="8.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="9.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="10.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="11.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="12.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="13.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="14.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="15.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="16.png" alt="" class="lazy">
-		<img src="../../../images/placeholder.png" data-src="17.png" alt="" class="lazy">
+		<img src="/images/app/tianmai/1.png" alt="">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/2.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/3.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/4.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/5.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/6.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/7.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/8.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/9.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/10.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/11.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/12.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/13.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/14.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/15.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/16.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/app/tianmai/17.png" alt="" class="lazy">
     </main>
 	<!-- ---- JS ---- -->
-	<script src="../../../js/lazyload.js"></script>
+	 <!-- 要保证资源加载完才能再加载并执行这个lazyload.js文件，要不然没有资源的话js代码无法判断 -->
+	<script src="/js/lazyload.js"></script>
 </body>
 </html>

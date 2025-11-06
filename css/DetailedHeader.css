@@ -42,7 +42,7 @@
     width:2rem;
     height:2rem;
     border-radius: 50%; 
-    background: url("../images/logo.png") no-repeat;
+    background: url("/images/logo.png") no-repeat;
     background-color: #7bd3e9;
     background-size:2rem 2rem;
     cursor: default;

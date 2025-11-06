@@ -13,7 +13,7 @@ body{
     font-size: 16px;
     line-height: 1.5;
     color: var(--text-light);
-    background: var(--background-dark) url(../images/bj.png) center center no-repeat fixed;
+    background: var(--background-dark) url(/images/bj.png) center center no-repeat fixed;
     background-size: cover;
 }
 /* 1. 外层 Grid：定义左右两栏的宏观结构 */
@@ -44,7 +44,7 @@ body{
     width:4rem;
     height:4rem;
     border-radius: 50%; 
-    background: url("../images/logo.png") no-repeat;
+    background: url("/images/logo.png") no-repeat;
     background-color: var(--primary-color);
     background-size:4rem 4rem;
     /* cursor: pointer;  */
@@ -96,7 +96,7 @@ body{
 /*自我介绍*/
 .about-container{
     width: 100%;
-    height: 100vh;
+    height: 30vh;
     /* background-color: #7bd3e9; */
 }
 
@@ -155,16 +155,16 @@ main li img{
     object-fit: cover;
     border-radius:1.2rem;
 }
-.mask {
+/* .mask {
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     right: 0;
-    background: transparent url(../images/pattern_pc.png) repeat top left;
+    background: transparent url(/images/pattern_pc.png) repeat top left;
 	opacity: 0.8;
     z-index: -1;
-}
+} */
 
 /* ------------------------------------------- */
 /* 媒体查询：适用于 平板 和 手机 (小于 768px) */
