@@ -3,8 +3,8 @@
   --primary-color:#7bd3e9;
   --background-dark: #151515;
   --text-light: #999;
-  --text-left-group:#898B8E;
-  --text-left-menu:#cfd4d5;
+  --sidebar-group:#898B8E;
+  --sidebar-menu:#cfd4d5;
   /* ... */
 }
 body{
@@ -14,7 +14,6 @@ body{
     line-height: 1.5;
     color: var(--text-light);
     background: var(--background-dark) url(../images/bj.png) center center no-repeat fixed;
-    /* background: var(--background-dark) url(../images/bj2.png) center center no-repeat fixed; */
     background-size: cover;
 }
 /* 1. 外层 Grid：定义左右两栏的宏观结构 */
@@ -29,14 +28,13 @@ body{
     flex-direction: column; /* 设置主轴为垂直方向 */
     align-items: flex-start; /* 交叉轴（水平）从左侧开始对齐 */
 
-    /* 1. 启用粘性定位 */
-    position: sticky;   
-    /* 2. 规定它“粘住”的位置 */
-    top: 0; /* 当滚动到距离视口顶部0px时，它就开始固定 */  
-    /* 确保侧边栏的高度能覆盖内容区（如果内容区很长） */
-    height: 100vh; /* 视口高度的100% */
+    /* 启用粘性定位 */
+    position: sticky;
+    /* 规定它“粘住”的位置,当滚动到距离视口顶部0时，它就开始固定 */
+    top: 0;
+    /* 视口高度的100%,确保侧边栏的高度能覆盖内容区（如果内容区很长） */ 
+    height: 100vh;
 
-    /* padding:0 40px 0 0; */
     background-color: #1b1b1b;
     border-right:1px solid #333333;
     /* box-shadow: 0 0.7rem 2.5rem rgb(0 0 0 / 50%); */
@@ -53,7 +51,6 @@ body{
 	transition: all 0.3s ease-in-out;
 }
 .sidebar .logo:hover{
-    /*background: url("../images/logoh.png") no-repeat; background-size:68px 68px;*/
     filter: brightness(1.1);
 	transition: all 0.3s ease-in-out;
 	margin-left:2.75rem;
@@ -61,7 +58,7 @@ body{
 .sidebar span{
     margin-top:0.8rem;
     font-size:0.8rem;
-    color:var(--text-left-group);
+    color:var(--sidebar-group);
     padding:0.25rem 0 0.25rem 0;
     padding-left: 2.5rem;
 }
@@ -71,7 +68,7 @@ body{
     padding-left: 2.5rem;
     font-size: 1rem;
     font-weight:800;
-    color:var(--text-left-menu);
+    color:var(--sidebar-menu);
     cursor: pointer;
     border-radius:0 2rem 2rem 0; 
 	transition: all 0.3s ease-in-out;
@@ -91,9 +88,6 @@ body{
     padding-bottom: 0.3rem; */
     background:rgba(255,255,255,.1);
     transition: all 0.3s ease-in-out;
-    /* box-shadow: inset 5px 0 0 var(--primary-color);  */
-    /* margin-right: 0; 修正因为box-shadow导致的宽度问题，或者调整内边距 */
-    /* padding-left: 35px; 调整内边距以适应左侧边框 */
 }
 
 
@@ -114,13 +108,14 @@ body{
     /*
     * 核心代码:
     * auto-fit: 自动填充，尽可能多地在一行内容纳列。
-    * minmax(300px, 1fr): 每个卡片的最小宽度是300px，最大宽度是1份（平分剩余空间）。
-    * 当屏幕宽度无法容纳两个300px的卡片时，它会自动变成单列。
+    * minmax(30rem, 1fr): 每个卡片的最小宽度是30rem，最大宽度是1份（平分剩余空间）。
+    * 当屏幕宽度无法容纳两个30rem的卡片时，它会自动变成单列。
     */
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2rem; /* 卡片之间的间距 */
-    padding-left: 4%;
-    padding-right: 4%;
+    /* 卡片之间的间距 */
+    gap: 2rem;
+    /* 左右两侧的内边距 */
+    padding: 0 4%;
 
 }
 
@@ -139,7 +134,7 @@ main li a{
     display:block;
     width:100%;
     /* height:100%; */
-    /* 关键：设置宽高比为 4 宽 / 3 高 */
+    /*设置宽高比为 4 宽 / 3 高 */
     aspect-ratio: 4 / 3;
     border-radius: 1.2rem;
 	transition: all 0.3s ease-in-out;
@@ -156,7 +151,7 @@ main li a:hover{
 main li img{
     width: 100%;
     height: 100%;
-    background-color: #2d2d2d;
+    background-color: #c0c0c0;
     object-fit: cover;
     border-radius:1.2rem;
 }
@@ -197,7 +192,6 @@ main li img{
            让 1fr 完全占据所有可用宽度，消除空白。 */
         grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr)); 
         gap: 1rem; /* 卡片之间的间距 */
-        padding-left: 6%;
-        padding-right: 6%;
+        padding: 0 6%;
     }
 }
