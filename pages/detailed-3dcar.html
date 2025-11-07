@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Design Case</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/detailed-1header.css">
+	<!-- 这个loadDetailedHeader.js要先执行，目的是为了刚进去就加载头部文件，体验好一些，也是因为这个js只是加载文件，不用判断其它资源，所以可以先加载 -->
+	<script src="/js/load-detailed-1header.js"></script>
+</head>
+<body>
+	<!-- 这里用JS加载文件到这个<header>标签 -->
+	<header></header>
+	<main>
+		<img src="/images/uiux/3dcar/1.png" alt="">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/2.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/3.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/4.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/5.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/6.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/7.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/8.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/9.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/10.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/11.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/12.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/13.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/14.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/15.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/16.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/17.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/18.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/19.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/20.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/21.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/22.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/23.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/24.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/3dcar/25.png" alt="" class="lazy">
+    </main>
+	<!-- ---- JS ---- -->
+	<!-- 要保证资源加载完才能再加载并执行js文件，要不然没有资源的话js代码无法判断 -->
+	<script src="/js/load-json.js"></script>
+	<script src="/js/lazy-load.js"></script>
+</body>
+</html>

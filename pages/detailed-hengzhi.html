@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Design Case</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/detailed-1header.css">
+	<!-- 这个loadDetailedHeader.js要先执行，目的是为了刚进去就加载头部文件，体验好一些，也是因为这个js只是加载文件，不用判断其它资源，所以可以先加载 -->
+	<script src="/js/load-detailed-1header.js"></script>
+</head>
+<body>
+	<!-- 这里用JS加载文件到这个<header>标签 -->
+	<header></header>
+	<main>
+		<img src="/images/uiux/hengzhi/1.png" alt="">
+		<img src="/images/placeholder.png" data-src="/images/uiux/hengzhi/2.png" alt="" class="lazy">
+		<img src="/images/placeholder.png" data-src="/images/uiux/hengzhi/3.png" alt="" class="lazy">
+    </main>
+	<!-- ---- JS ---- -->
+	<!-- 要保证资源加载完才能再加载并执行js文件，要不然没有资源的话js代码无法判断 -->
+	<script src="/js/load-json.js"></script>
+	<script src="/js/lazy-load.js"></script>
+</body>
+</html>
