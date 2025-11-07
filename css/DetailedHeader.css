@@ -12,6 +12,7 @@
     /* -webkit-backdrop-filter: blur(8px); */
 }
 .header-content {
+    /* min-width: 20rem; */
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -19,8 +20,8 @@
     justify-content: space-between;
     /*居中对齐*/
     align-items: center;
-    padding-left: 2%;
-    padding-right: 3%;
+    gap: 1rem;
+    padding: 0 1rem;
 }
 /* ... 头部其他样式不变 ... */
 .back-btn { 
@@ -28,18 +29,32 @@
     align-items: center; 
     color: rgba(255, 255, 255, .8);
     font-size: 1rem; 
+    padding: 0.4rem;
+    border-radius: 50%;
+    border:1px solid rgba(255, 255, 255, .8);
+    /*确保图标不被挤压*/
+    flex-shrink: 0;
+	/* transition: all 0.3s ease-in-out; */
+}
+.back-btn:hover{
+    background-color: rgba(255, 255, 255, .1);
+	/* transition: all 0.3s ease-in-out; */
 }
 .back-btn svg { 
-    width: 1.5rem; 
-    height: 1.5rem; 
-    margin-right: 0.5rem; 
+    width: 1.2rem; 
+    height: 1.2rem; 
+    /* margin-right: 0.2rem;  */
     /* 核心微调：将 SVG 垂直下移一点，与文字视觉中心对齐 */
     /* 使用 relative 定位或 transform 微调，这里用 transform 更简洁 */
-    transform: translateY(1px);
+    /* transform: translateY(1px); */
 }
 .title_display{
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 400;
     color: rgba(255, 255, 255, .8);
+    white-space: nowrap; /* 强制文本不换行 */
+    overflow: hidden;    /* 隐藏溢出部分 */
+    text-overflow: ellipsis; /* 将溢出部分显示为省略号 (...) */
 }
 /*头像*/
 .avatar{
@@ -50,7 +65,10 @@
     background: url("/images/logo.png") no-repeat;
     background-color: #7bd3e9;
     background-size:2rem 2rem;
+    /*不显示点击小手*/
     cursor: default;
+    /*确保图标不被挤压*/
+    flex-shrink: 0;
 }
 
 /* --- 详情图片 --- */
