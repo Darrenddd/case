@@ -219,7 +219,7 @@ main li img{
         /* KEY FIX: 
            当宽度很小时，将 minmax 的最小值设为 0（或 100px），
            让 1fr 完全占据所有可用宽度，消除空白。 */
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); 
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); 
         gap: 1rem; /* 卡片之间的间距 */
         padding: 0 6%;
     }
