@@ -3,6 +3,8 @@
 // 当滚动右侧内容里，左侧选中相应的导航菜单
 document.addEventListener('DOMContentLoaded', function() {
         const navLinks = document.querySelectorAll('.sidebar .nav-link');
+        // 【新增】单独选择顶部要滚动的链接
+        const headerNavLink = document.querySelector('.about-container .nav-link');
         const logoLink = document.getElementById('logo-link');
         const $window = $(window);
         const $htmlBody = $('html,body');
@@ -82,6 +84,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 setActiveLink(null);
                 console.log("Click: Scrolling to top (logo).");
                 $htmlBody.stop().animate({scrollTop: '0px'}, 500);
+            });
+        }
+
+        if (headerNavLink) {
+            headerNavLink.addEventListener('click', function(event) {
+                
+                // 阻止默认行为
+                event.preventDefault(); 
+                
+                // 清除左侧所有 active 状态 (保持不变)
+                setActiveLink(null); 
+
+                const classList = this.classList;
+                let targetClass = '';
+                for (let cls of classList) {
+                    if (cls.startsWith('scroll-')) {
+                        targetClass = '.' + cls.replace('scroll-', '');
+                        break;
+                    }
+                }
+
+                if (targetClass && $(targetClass).length) {
+                    // 【最终修复】：使用 jQuery 动画和 offset().top
+                    // 这是您最初的代码逻辑，在 Edge/jQuery 环境下最可靠
+                    const targetOffset = $(targetClass).offset().top;
+                    
+                    // 使用 $htmlBody（即 $('html,body')）来执行动画，确保兼容 Edge
+                    $htmlBody.stop().animate({
+                        scrollTop: targetOffset
+                    }, 500); 
+                }
             });
         }
 
