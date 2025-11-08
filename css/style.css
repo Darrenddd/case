@@ -102,7 +102,7 @@ body{
     align-items: center;
     /* 将内容推向容器底部 */
     justify-content: flex-end;
-    /* background-color: #7bd3e9; */
+    background-color: #7bd3e9;
 }
 .header-content {
     /* 【核心技巧】：将元素推到 flex 容器的最起始端（顶部） */
@@ -219,7 +219,7 @@ main li img{
         /* KEY FIX: 
            当宽度很小时，将 minmax 的最小值设为 0（或 100px），
            让 1fr 完全占据所有可用宽度，消除空白。 */
-        grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr)); 
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); 
         gap: 1rem; /* 卡片之间的间距 */
         padding: 0 6%;
     }
