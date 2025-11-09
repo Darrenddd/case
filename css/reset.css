@@ -8,7 +8,7 @@ body{
   -moz-osx-font-smoothing: grayscale; /*字体看着更平滑*/
   -webkit-text-size-adjust: none; /*移动端横竖屏字体乎大乎小，兼容老版本iOS 或 Android 设备*/
   text-size-adjust: none; /*移动端横竖屏字体乎大乎小*/
-  overscroll-behavior: none; /*禁用 Android Chrome 和其他支持弹性滚动的浏览器的过度滚动效果*/
+  overscroll-behavior: none; /*禁用 Android Chrome 和其他支持弹性滚动的浏览器的过度滚动效果，上下左右到头了还能拉出半圆形的透明黑底*/
 }
 /*【圖片和多媒體元素】設置為塊級元素，自動縮放以適應其容器*/
 img, picture, video, canvas, svg {
