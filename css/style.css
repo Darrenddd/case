@@ -1,8 +1,21 @@
+@font-face {
+  /* 1. 自定義字體名稱：這是你將在 font-family 中使用的名字 */
+  font-family: 'NotoSansSC'; 
+
+  /* 2. 字體文件的位置 */
+  src: url('/fonts/subset-NotoSansSC-ExtraBold.woff2') format('woff2'),
+       url('/fonts/subset-NotoSansSC-ExtraBold.woff') format('woff');
+  /* 3. 定義這個文件的字重（標準、粗體等） */
+  font-weight: bold; 
+  /* 4. 定義這個文件的字形（正常、斜體） */
+  font-style: normal; 
+}
 :root {
   /* --primary-color:#3effb8; */
   --primary-color:#7bd3e9;
   --background-dark: #000;
-  --text-light: #999;
+  --text-light: #b7ab98;
+  --text-red: #EB5939;
   --sidebar-group:#898B8E;
   --sidebar-menu:#cfd4d5;
   /* ... */
@@ -42,12 +55,12 @@ body{
 }
 .sidebar .logo{
     margin:2rem 0 0.8rem 2.5rem;
-    width:4rem;
-    height:4rem;
+    width:3.5rem;
+    height:3.5rem;
     border-radius: 50%; 
     background: url("/images/logo.png") no-repeat;
     background-color: var(--primary-color);
-    background-size:4rem 4rem;
+    background-size:3.5rem 3.5rem;
     /* cursor: pointer;  */
 	transition: all 0.3s ease-in-out;
 }
@@ -59,7 +72,7 @@ body{
 .sidebar span{
     margin-top:0.8rem;
     font-size:0.8rem;
-    color:var(--sidebar-group);
+    color:var(--text-light);
     padding:0.25rem 0 0.25rem 0;
     padding-left: 2.5rem;
 }
@@ -69,7 +82,7 @@ body{
     padding-left: 2.5rem;
     font-size: 1rem;
     font-weight:700;
-    color:var(--sidebar-menu);
+    color:var(--text-light);
     cursor: pointer;
     border-radius:0 2rem 2rem 0; 
 	transition: all 0.3s ease-in-out;
@@ -87,7 +100,8 @@ body{
     /* margin: 0.15rem 0 0.15rem 0; */
     /* padding-top: 0.3rem;
     padding-bottom: 0.3rem; */
-    background:rgba(255,255,255,.1);
+    /* color: #EB5939; */
+    background:rgba(255,255,255,.2);
     transition: all 0.3s ease-in-out;
 }
 
@@ -102,44 +116,47 @@ body{
     align-items: center;
     background: url(/images/bg-stars.jpg) center center no-repeat fixed;
 }
-.header-content{
+/* 头部文字+按钮 */
+.about-container .header-content{
     z-index: 100;
+    font-family: 'NotoSansSC', "Arial Black", sans-serif;
+    font-weight: 700;
+    margin: 6% 20% 2%;
     text-align: center;
 }
-.header-content h1{
-    /* font-family:  "Arial Black"; */
-    font-family: "Impact";
-    /* font-family:  'Times New Roman'; */
-    margin: 12% 10% 4%;
-    font-size: 5rem;
-    font-weight: 1000;
-    /* color: #E95B2A; */
-    line-height: 1.2;
-    /* 应用渐变效果 */
-    background-image: linear-gradient(to right, #E95B2A, #e9b32a);
-    -webkit-background-clip: text; 
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+/* 副标题英文 */
+.about-container .subtitle{
+    font-size: 2rem;
 }
-.header-content button{
+/* 大标题 */
+.about-container .main-title{
+    margin-top: 1rem;
+    font-size: 6rem;
+    line-height: 110%;
+}
+.about-container .main-title .color-orange{
+    color: var(--text-red);
+}
+/* 头部按钮 */
+.about-container button{
+    margin-top: 4%;
     font-size: 1.2rem;
     font-weight: 700;
-    color: #000;
+    color: #B7AB98;
     padding: 0.6rem 2.2rem;
-    background: rgba(255, 255, 255, .9);
-    border: 0.1rem solid #fff;
+    border: 0.1rem solid var(--text-light);
     border-radius:5rem;
-    transition: all 0.3s ease-in-out;
-}
-.header-content button:hover{
-    /* color: #fff; */
-    background: rgba(255, 255, 255, 1);
     box-shadow: 0 1rem 6rem rgba(254, 160, 45, .3);
     transition: all 0.3s ease-in-out;
 }
-.header-content button:active{
+.about-container button:hover{
+    color: #000;
+    background: var(--text-light);
     box-shadow: 0 1rem 6rem rgba(254, 160, 45, .6);
+    transition: all 0.3s ease-in-out;
+}
+.about-container button:active{
+    box-shadow: 0 1rem 6rem rgba(254, 160, 45, .9);
 }
 /* 篝火视频 */
 .campfire-area {
@@ -173,7 +190,7 @@ body{
 
 main h2{
     font-size:2rem;
-    color:var(--primary-color);
+    color:var(--text-light);
     padding:7rem 0 4rem 0;
     font-weight: 700;
     padding-left: 4%;
