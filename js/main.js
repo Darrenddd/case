@@ -158,3 +158,45 @@ document.addEventListener('DOMContentLoaded', function() {
         $window.on('scroll', scrollHandler);
         scrollHandler(); 
     });
+
+
+
+    // ===========================================
+    // 弹出式窗口来显示html
+    // ===========================================
+
+    const triggers = document.querySelectorAll('.modal-trigger');
+    const dialog = document.getElementById('contentDialog');
+    const iframe = document.getElementById('externalFrame');
+    const closeBtn = document.getElementById('closeBtn');
+    
+    // 关键：获取 body 元素
+    const body = document.body; 
+
+    // --- 打开逻辑 ---
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            const targetSrc = this.getAttribute('data-src');
+            
+            iframe.src = targetSrc;
+            dialog.showModal();
+            
+            // ⭐️ 核心修改 1: 打开时添加类，禁用滚动
+            body.classList.add('modal-active');
+        });
+    });
+
+    // --- 关闭逻辑 ---
+    closeBtn.addEventListener('click', function() {
+        dialog.close();
+        
+        // ⭐️ 核心修改 2: 关闭时移除类，恢复滚动
+        body.classList.remove('modal-active');
+        iframe.src = 'about:blank'; 
+    });
+    
+    // 额外的：处理 Esc 键关闭后恢复滚动
+    dialog.addEventListener('close', function() {
+         body.classList.remove('modal-active');
+    });

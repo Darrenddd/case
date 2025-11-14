@@ -7,9 +7,8 @@
     border-bottom:1px solid rgba(255, 255, 255, .1);
     z-index: 100;		
     /* 顶部半黑模糊效果 */
-    background-color: rgba(29, 29, 31, .8);; 
-    backdrop-filter: saturate(180%) blur(20px);; 
-    /* -webkit-backdrop-filter: blur(8px); */
+    background-color: rgba(29, 29, 31, .8);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 .header-content {
     /* min-width: 20rem; */
@@ -23,7 +22,7 @@
     gap: 1rem;
     padding: 0 1rem;
 }
-/* ... 头部其他样式不变 ... */
+/* 关闭按钮 */
 .back-btn { 
     display: flex; 
     align-items: center; 
@@ -48,6 +47,7 @@
     /* 使用 relative 定位或 transform 微调，这里用 transform 更简洁 */
     /* transform: translateY(1px); */
 }
+/* 标题 */
 .title_display{
     font-size: 1rem;
     font-weight: 400;
@@ -72,6 +72,9 @@
 }
 
 /* --- 详情图片 --- */
+main{
+    /* padding-top: 3.5rem; */
+}
 main img{
     width:100%;
 }

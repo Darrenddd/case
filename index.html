@@ -12,6 +12,13 @@
 	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
+	<dialog id="contentDialog">
+		<iframe id="externalFrame" src="" frameborder="0"></iframe>
+		
+		<button id="closeBtn" value="cancel">关闭</button>
+	</dialog>
+
 	<!-- 整个页面结构，左右结构 -->
 	<div class="page-container">
 		<!-- 侧边栏 -->
@@ -54,7 +61,8 @@
 
 			<h2 class="onea">UI/UX设计</h2>
 			<ul class="content-grid">
-				<li><a href="/pages/detailed-well.html"><img src="/images/uiux/well/0Thumbnail.jpg" /></a></li>
+				<li><a href="#" class="modal-trigger" data-src="/pages/detailed-well.html"><img src="/images/uiux/well/0Thumbnail.jpg" /></a></li>
+				<!-- <li><a href="/pages/detailed-well.html"><img src="/images/uiux/well/0Thumbnail.jpg" /></a></li> -->
 				<li><a href="/pages/detailed-diantai.html"><img src="/images/uiux/diantai/0Thumbnail.jpg" /></a></li>
 				<li><a href="/pages/detailed-tuopu.html"><img src="/images/uiux/tuopu/0Thumbnail.jpg" /></a></li>
 				<li><a href="/pages/detailed-guoyuantong.html"><img src="/images/uiux/guoyuantong/0Thumbnail.jpg" /></a></li>
@@ -72,15 +80,16 @@
 			</ul>
 			<h2 class="oneb">品牌识别与物料</h2>
 			<ul class="content-grid">
-				<!-- <li><a href="/images/app/jsjiankangtong/jsjiankangtong.html" ><img src="/images/app/jsjiankangtong/jsjiankangtong.jpg" /></a></li>
-				<li><a href="/images/applet/diantai/diantai.html" ><img src="/images/applet/diantai/diantai.jpg" /></a></li>
-				<li><a href="/images/app/tuopu/tuopu.html" ><img src="/images/app/tuopu/tuopu.jpg" /></a></li> -->
+				<li><a href="/pages/detailed-barbecue.html"><img src="/images/brand/barbecue/0Thumbnail.jpg" /></a></li>
+				<li><a href="/pages/detailed-travel.html"><img src="/images/brand/travel/5.webp" /></a></li>
+				<li><a href="/pages/detailed-photovoltaic.html"><img src="/images/brand/photovoltaic/2.webp" /></a></li>
 			</ul>
 			<h2 class="onec">媒体营销</h2>
 			<ul class="content-grid">
-				<!-- <li><a href="/images/cms/litian/litian.html" ><img src="/images/cms/litian/litian.jpg" /></a></li>
-				<li><a href="/images/cms/KEDO/KEDO.html" ><img src="/images/cms/KEDO/KEDO.jpg" /></a></li>
-				<li><a href="/images/cms/101plus/101plus.html" ><img src="/images/cms/101plus/101plus.jpg" /></a></li> -->
+				<li><a href="/pages/detailed-wedding.html"><img src="/images/promotion/wedding/0Thumbnail.jpg" /></a></li>
+				<li><a href="/pages/detailed-school.html"><img src="/images/promotion/school/1.jfif" /></a></li>
+				<li><a href="/pages/detailed-yuzhua.html"><img src="/images/promotion/yuzhua/0Thumbnail.jpg" /></a></li>
+				<li><a href="/pages/detailed-kub.html"><img src="/images/promotion/kub/0Thumbnail.jpg" /></a></li>
 			</ul>
 
 			<h2 class="twoa">前端Web开发</h2>
@@ -114,16 +123,16 @@
 
 			<h2 class="threeb">插画</h2>
 			<ul class="content-grid">
-				<li><a href="/images/card/img003.html" ><img src="/images/card/img003-s.jpg" /></a></li>
-				<li><a href="/images/card/img004.html" ><img src="/images/card/img004-s.jpg" /></a></li>
-				<li><a href="/images/card/img001.html" ><img src="/images/card/img001-s.jpg" /></a></li>
+				<li><a href="/pages/detailed-graduation.html" ><img src="/images/illustration/graduation/8.jfif" /></a></li>
+				<li><a href="/pages/detailed-woman.html" ><img src="/images/illustration/woman/0Thumbnail.jpg" /></a></li>
 			</ul>
 
 			<h2 class="threec">动画动效</h2>
 			<ul class="content-grid">
-				<li><a href="/images/logo/img003.html" ><img src="/images/logo/img003-s.jpg" /></a></li>
-				<li><a href="/images/logo/img002.html" ><img src="/images/logo/img002-s.jpg" /></a></li>
-				<li><a href="/images/logo/img001.html" ><img src="/images/logo/img001-s.jpg" /></a></li>
+				<li><a href="/pages/detailed-animation1.html" ><img src="/images/animation/animation1/1.jfif" /></a></li>
+				<li><a href="/pages/detailed-animation2.html" ><img src="/images/animation/animation2/1.jfif" /></a></li>
+				<li><a href="/pages/detailed-animation3.html" ><img src="/images/animation/animation3/1.jfif" /></a></li>
+				<li><a href="/pages/detailed-smarthome.html" ><img src="/images/animation/smarthome/9.jfif" /></a></li>
 			</ul>
 
 		</main>
@@ -133,5 +142,6 @@
 	<script src="/js/jquery.js"></script>
 	<script src="/js/modernizr.custom.86080.js"></script>
 	<script src="/js/main.js"></script>
+	
 </body>
 </html>

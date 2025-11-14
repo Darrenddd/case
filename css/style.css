@@ -96,11 +96,11 @@ body{
 .sidebar .nav-link.active {
     /* height: 15rem; */
     /* font-size: 1.1rem; */
-    color:var(--primary-color);
+    /* color:var(--primary-color); */
     /* margin: 0.15rem 0 0.15rem 0; */
     /* padding-top: 0.3rem;
     padding-bottom: 0.3rem; */
-    /* color: #EB5939; */
+    color: #fff;
     background:rgba(255,255,255,.2);
     transition: all 0.3s ease-in-out;
 }
@@ -234,6 +234,50 @@ main li img{
 	opacity: 0.8;
     z-index: -1;
 } */
+
+/* ------------------------------------------- */
+/* 弹出式窗口来显示html */
+/* ------------------------------------------- */
+/* 关键：强制隐藏滚动条，并防止内容移动 */
+.modal-active {
+    overflow: hidden !important;
+    padding-right: 15px; /* 补偿滚动条消失时页面内容的微小移动 (可选) */
+}
+/* 1. 定制全屏遮罩 (Backdrop) */
+dialog::backdrop {
+    /* background-color: rgba(0, 0, 0, 0.2);  */
+    background-color: rgba(29, 29, 31, .8);
+    backdrop-filter: saturate(180%) blur(10px);
+}
+/* 2. 可选：iFrame 和 Dialog 的尺寸与样式 */
+#contentDialog {
+    /* 让对话框本身更美观 */
+    border: none;
+    padding: 0;
+    margin: auto; /* 确保它在 modal 模式下居中 */
+    /* 设置最大宽度 */
+    /* max-width: 90vw;  */
+    /* 设置最大高度 */
+    /* max-height: 90vh;  */
+    background: transparent; /* 确保 dialog 本身没有白色背景 */
+}
+#externalFrame {
+    /* 您想要的 iFrame 宽度 */
+    width: 80vw;
+    /* 您想要的 iFrame 高度 */
+    height: 90vh;
+    /* 给 iFrame 内容一个白色背景 */
+    /* background-color: white;  */
+    border-radius:0.8rem;
+}
+#closeBtn {
+    /* 样式化您的关闭按钮，例如放在右上角 */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
 
 /* ------------------------------------------- */
 /* 媒体查询：适用于 平板 和 手机 (小于 768px) */
