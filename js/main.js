@@ -10,21 +10,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const $htmlBody = $('html,body');
 
         const setActiveLink = (elementToActivate) => {
-            console.log("setActiveLink called. Element to activate:", elementToActivate ? elementToActivate.textContent || elementToActivate.id : "null");
+            // console.log("setActiveLink called. Element to activate:", elementToActivate ? elementToActivate.textContent || elementToActivate.id : "null");
             navLinks.forEach(item => {
                 if (item.classList.contains('active')) {
                     item.classList.remove('active');
-                    console.log("Removed active from:", item.textContent || item.id);
+                    // console.log("Removed active from:", item.textContent || item.id);
                 }
             });
             if (logoLink && logoLink.classList.contains('active')) {
                 logoLink.classList.remove('active');
-                console.log("Removed active from logo.");
+                // console.log("Removed active from logo.");
             }
 
             if (elementToActivate) {
                 elementToActivate.classList.add('active');
-                console.log("Added active to:", elementToActivate.textContent || elementToActivate.id);
+                // console.log("Added active to:", elementToActivate.textContent || elementToActivate.id);
             }
         };
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     linkElement: link,
                     sectionElement: sectionElement
                 });
-                console.log(`Mapped: NavLink(${link.textContent}) to Section(${targetClass}) at Top: ${sectionElement.offset().top}`);
+                // console.log(`Mapped: NavLink(${link.textContent}) to Section(${targetClass}) at Top: ${sectionElement.offset().top}`);
             } else {
                 console.warn(`NavLink(${link.textContent}) could not find corresponding section with class: ${targetClass}`);
             }
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (targetClass && $(targetClass).length) {
                     const targetOffset = $(targetClass).offset().top;
-                    console.log(`Click: Scrolling to ${targetClass} at ${targetOffset}px`);
+                    // console.log(`Click: Scrolling to ${targetClass} at ${targetOffset}px`);
                     $htmlBody.stop().animate({
                         scrollTop: targetOffset
                     }, 500);
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
             logoLink.addEventListener('click', function(event) {
                 event.preventDefault();
                 setActiveLink(null);
-                console.log("Click: Scrolling to top (logo).");
+                // console.log("Click: Scrolling to top (logo).");
                 $htmlBody.stop().animate({scrollTop: '0px'}, 500);
             });
         }
@@ -128,28 +128,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 const currentScrollTop = $window.scrollTop();
                 const offsetThreshold = 500; // 再次确认这个值是否合适
 
-                console.log(`Scroll: currentScrollTop = ${currentScrollTop}`);
+                // console.log(`Scroll: currentScrollTop = ${currentScrollTop}`);
 
                 let currentActiveLink = null;
 
                 for (let i = sections.length - 1; i >= 0; i--) {
                     const section = sections[i];
                     const sectionTop = section.sectionElement.offset().top;
-                    console.log(`  Checking: NavLink(${section.linkElement.textContent}), Section(${section.sectionElement.attr('class')}), Top: ${sectionTop}`);
+                    // console.log(`  Checking: NavLink(${section.linkElement.textContent}), Section(${section.sectionElement.attr('class')}), Top: ${sectionTop}`);
                     if (currentScrollTop + offsetThreshold >= sectionTop) {
                         currentActiveLink = section.linkElement;
-                        console.log(`  Match found! Activating: NavLink(${currentActiveLink.textContent})`);
+                        // console.log(`  Match found! Activating: NavLink(${currentActiveLink.textContent})`);
                         break; 
                     }
                 }
 
                 if (currentActiveLink) {
                     if (!currentActiveLink.classList.contains('active')) {
-                        console.log("Scroll: Active link changed.");
+                        // console.log("Scroll: Active link changed.");
                         setActiveLink(currentActiveLink);
                     }
                 } else if (currentScrollTop === 0) {
-                    console.log("Scroll: Reached top, clearing active.");
+                    // console.log("Scroll: Reached top, clearing active.");
                     setActiveLink(null);
                 }
             }, 100);
@@ -182,7 +182,17 @@ document.addEventListener('DOMContentLoaded', function() {
             iframe.src = targetSrc;
             dialog.showModal();
             
-            // ⭐️ 核心修改 1: 打开时添加类，禁用滚动
+            // ⭐️ 核心修改 1: 在这里获取 pageId 并调用函数
+            // 假设 targetSrc 是 "/pages/detailed-tianmai.html"
+            const targetPageId = targetSrc.split('/').pop().replace('.html', ''); 
+
+            // 调用 load-json.js 中定义的函数
+            if (typeof updateDialogTitle === 'function') {
+                updateDialogTitle(targetPageId);
+            }
+            // ⭐️ 核心修改 1 结束
+
+            // ⭐️ 核心修改 2: 打开时添加类，禁用滚动
             body.classList.add('modal-active');
         });
     });

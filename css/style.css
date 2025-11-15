@@ -119,17 +119,18 @@ body{
 /* 头部文字+按钮 */
 .about-container .header-content{
     z-index: 100;
-    font-family: 'NotoSansSC', "Arial Black", sans-serif;
     font-weight: 700;
     margin: 6% 20% 2%;
     text-align: center;
 }
 /* 副标题英文 */
 .about-container .subtitle{
+    font-family: 'NotoSansSC', "Arial Black", sans-serif;
     font-size: 2rem;
 }
 /* 大标题 */
 .about-container .main-title{
+    font-family: 'NotoSansSC', "Arial Black", sans-serif;
     margin-top: 1rem;
     font-size: 6rem;
     line-height: 110%;
@@ -245,9 +246,8 @@ main li img{
 }
 /* 1. 定制全屏遮罩 (Backdrop) */
 dialog::backdrop {
-    /* background-color: rgba(0, 0, 0, 0.2);  */
     background-color: rgba(29, 29, 31, .8);
-    backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 /* 2. 可选：iFrame 和 Dialog 的尺寸与样式 */
 #contentDialog {
@@ -256,26 +256,97 @@ dialog::backdrop {
     padding: 0;
     margin: auto; /* 确保它在 modal 模式下居中 */
     /* 设置最大宽度 */
-    /* max-width: 90vw;  */
+    max-width: 90vw; 
     /* 设置最大高度 */
     /* max-height: 90vh;  */
     background: transparent; /* 确保 dialog 本身没有白色背景 */
+    border-radius:1rem;
 }
-#externalFrame {
+#contentDialog #externalFrame {
     /* 您想要的 iFrame 宽度 */
-    width: 80vw;
+    width: 60vw;
     /* 您想要的 iFrame 高度 */
     height: 90vh;
-    /* 给 iFrame 内容一个白色背景 */
-    /* background-color: white;  */
-    border-radius:0.8rem;
+    /* 给 iFrame 内容一个背景 */
+    background-color: rgb(46, 46, 48);
+    border-radius:1.1rem;
+    /* border: 0.1rem solid #2C2C2C; */
 }
-#closeBtn {
-    /* 样式化您的关闭按钮，例如放在右上角 */
+
+/* --- 固定头部样式 --- */
+/*背景*/
+#contentDialog .fixed-header {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 10;
+    top: 0;
+    right: 6px;
+    margin:1rem 2%;
+    width: 96%;
+    height: 4rem;     
+    border:1px solid rgba(255, 255, 255, .1);
+    z-index: 100;		
+    /* 顶部半黑模糊效果 */
+    border-radius: 100rem;
+    background-color: rgba(29, 29, 31, .8);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+#contentDialog .header-content {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    /*两端对齐*/
+    justify-content: space-between;
+    /*居中对齐*/
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.2rem;
+}
+/*头像*/
+#contentDialog .avatar{
+    /* margin:2rem 0 0.8rem 2.5rem; */
+    width:2.2rem;
+    height:2.2rem;
+    border-radius: 50%; 
+    background: url("/images/logo.png") no-repeat;
+    background-color: #7bd3e9;
+    background-size:2rem 2rem;
+    /*不显示点击小手*/
+    cursor: default;
+    /*确保图标不被挤压*/
+    flex-shrink: 0;
+}
+/* 标题 */
+#contentDialog .title_display{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .8);
+    white-space: nowrap; /* 强制文本不换行 */
+    overflow: hidden;    /* 隐藏溢出部分 */
+    text-overflow: ellipsis; /* 将溢出部分显示为省略号 (...) */
+}
+/* 关闭按钮 */
+#contentDialog #closeBtn { 
+    display: flex; 
+    align-items: center; 
+    color: rgba(255, 255, 255, .8);
+    font-size: 1rem; 
+    padding: 0.3rem;
+    border-radius: 50%;
+    border:0.1rem solid rgba(255, 255, 255, .8);
+    /*确保图标不被挤压*/
+    flex-shrink: 0;
+	/* transition: all 0.3s ease-in-out; */
+}
+#contentDialog #closeBtn:hover{
+    background-color: rgba(255, 255, 255, .1);
+	/* transition: all 0.3s ease-in-out; */
+}
+#contentDialog #closeBtn svg { 
+    width: 1.2rem; 
+    height: 1.2rem; 
+    /* margin-right: 0.2rem;  */
+    /* 核心微调：将 SVG 垂直下移一点，与文字视觉中心对齐 */
+    /* 使用 relative 定位或 transform 微调，这里用 transform 更简洁 */
+    /* transform: translateY(1px); */
 }
 
 
