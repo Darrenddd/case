@@ -9,11 +9,13 @@
 </head>
 <body>
 	<main>
-		<img src="/images/folder/ProjectName/1.webp" alt="">
-		<img src="/images/placeholder.png" data-src="/images/folder/ProjectName/2.webp" alt="" class="lazy">
+		<div class="video-container">
+			<video autoplay playsinline controls width="960">
+				<source src="/images/video/oral/oral.webm" type="video/webm">
+			</video>
+		</div>
     </main>
 	<!-- ---- JS ---- -->
-	<!-- 要保证资源加载完才能再加载并执行js文件，要不然没有资源的话js代码无法判断 -->
 	<script src="/js/lazy-load.js"></script>
 </body>
 </html>

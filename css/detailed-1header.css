@@ -23,6 +23,14 @@
     scrollbar-color: #007bff #e9ecef;
 } */
 
+
 main img{
     width:100%;
+}
+.video-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
 }
