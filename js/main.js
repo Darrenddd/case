@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dialog = document.getElementById('contentDialog');
     const iframe = document.getElementById('externalFrame');
     const closeBtn = document.getElementById('closeBtn');
-    
+
     // 关键：获取 body 元素
     const body = document.body; 
 
@@ -183,7 +183,6 @@ document.addEventListener('DOMContentLoaded', function() {
             dialog.showModal();
             
             // ⭐️ 核心修改 1: 在这里获取 pageId 并调用函数
-            // 假设 targetSrc 是 "/pages/detailed-tianmai.html"
             const targetPageId = targetSrc.split('/').pop().replace('.html', ''); 
 
             // 调用 load-json.js 中定义的函数
@@ -197,16 +196,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // --- 关闭逻辑 ---
+    // --- 关闭逻辑 (按钮点击) ---
     closeBtn.addEventListener('click', function() {
         dialog.close();
-        
-        // ⭐️ 核心修改 2: 关闭时移除类，恢复滚动
-        body.classList.remove('modal-active');
-        iframe.src = 'about:blank'; 
+        // 恢复滚动和清理 iframe 的操作放到 'close' 事件监听器中统一处理
     });
-    
-    // 额外的：处理 Esc 键关闭后恢复滚动
+
+    // ----------------------------------------------------
+    // ⭐️ 核心修正：针对 Firefox 优化，检查点击位置是否在弹窗外
+    // ----------------------------------------------------
+    dialog.addEventListener('click', function(event) {
+        const dialogDimensions = dialog.getBoundingClientRect();
+        
+        // 检查点击的 X 坐标和 Y 坐标是否在弹窗的可见边界之外
+        if (
+            event.clientX < dialogDimensions.left ||
+            event.clientX > dialogDimensions.right ||
+            event.clientY < dialogDimensions.top ||
+            event.clientY > dialogDimensions.bottom
+        ) {
+            dialog.close();
+        }
+    });
+
+    // ----------------------------------------------------
+    // 统一处理所有关闭操作（按钮、Esc 键、遮罩层点击）
+    // ----------------------------------------------------
     dialog.addEventListener('close', function() {
-         body.classList.remove('modal-active');
+        // 恢复滚动
+        body.classList.remove('modal-active');
+        // 清空 iframe，释放内存
+        iframe.src = 'about:blank'; 
     });

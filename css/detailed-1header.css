@@ -5,17 +5,17 @@
 }
 /* 滚动条轨道 (背景) */
 ::-webkit-scrollbar-track {
-    background: rgb(46, 46, 48);
+    background: #26262A;
     /* border-radius: 20px;  */
 }
 /* 滚动条手柄 (拖动部分) */
 ::-webkit-scrollbar-thumb {
-    background: rgb(115, 115, 119);
+    background: #7B7B7D;
     border-radius: 10px;
 }
 /* 鼠标悬停在手柄上时的颜色变化 */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(175, 175, 181); 
+    background: #68686A; 
 }
 /* Firefox */
 /* body {
