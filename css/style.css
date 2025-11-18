@@ -79,7 +79,7 @@ body{
     /* 禁用所有主流浏览器中的文本选中功能 */
     user-select: none;
     margin-top:0.8rem;
-    font-size:0.8rem;
+    font-size:0.7rem;
     color:var(--text-light);
     padding:0.25rem 0 0.25rem 0;
     padding-left: 2rem;
@@ -95,7 +95,7 @@ body{
     user-select: none;
 
     width: 13rem;
-    padding:0.3rem 0 0.3rem 0;
+    padding:0.3rem 0;
     padding-left: 1.8rem;
     font-size: 1rem;
     font-weight:700;
@@ -117,7 +117,29 @@ body{
     background:rgba(255,255,255,.2);
     transition: all 0.3s ease-in-out;
 }
-/* 统一图标的尺寸和显示方式 */
+/* 侧边栏底部链接 (精准定位) 简历*/
+.sidebar .footer-link {
+    position: absolute; 
+    bottom: 0;
+    /* 保持左右定位，与父容器的 padding/margin 对齐 */
+    /* left: 0;
+    right: 0; */
+    
+    margin: 0 2rem 2rem;
+    padding:0.5rem 0;
+    width: 11rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight:700;
+    color:var(--text-light);
+    cursor: pointer;
+    border-radius:0.5rem; 
+    border: 1px solid rgba(255, 255, 255, .15);
+    background-color: rgba(255, 255, 255, .05);
+	transition: all 0.3s ease-in-out;
+	
+}
+/* 导航菜单 - 统一图标的尺寸和显示方式 */
 .menu-icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -205,11 +227,26 @@ body{
 
 }
 main h2{
+    font-family: 'NotoSansSC', "Arial Black", sans-serif;
     font-size:2rem;
+    /* line-height: 2.7rem; */
     color:var(--text-light);
     padding:7rem 0 4rem 0;
     font-weight: 700;
     padding-left: 4%;
+}
+main h2 span{
+    color: var(--text-red);
+}
+/* h2图标 */
+main .h2-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.5rem;
+    border-radius: 10rem;
+    border: 0.15rem solid var(--text-light);
+    padding: 0.5rem;
+    margin-bottom: 2rem;
 }
 main li{
     margin-bottom: 4rem;
