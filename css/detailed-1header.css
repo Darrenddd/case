@@ -5,17 +5,16 @@
 }
 /* 滚动条轨道 (背景) */
 ::-webkit-scrollbar-track {
-    background: #26262A;
-    /* border-radius: 20px;  */
+    background: #2a2a2e;
 }
 /* 滚动条手柄 (拖动部分) */
 ::-webkit-scrollbar-thumb {
-    background: #7B7B7D;
+    background: #68686A; 
     border-radius: 10px;
 }
 /* 鼠标悬停在手柄上时的颜色变化 */
 ::-webkit-scrollbar-thumb:hover {
-    background: #68686A; 
+    background: #7B7B7D;
 }
 /* Firefox */
 /* body {
@@ -23,7 +22,13 @@
     scrollbar-color: #007bff #e9ecef;
 } */
 
-
+main{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    /* border-radius: 12px; */
+    padding-top: 0.75rem;
+}
 main img{
     width:100%;
 }

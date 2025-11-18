@@ -12,7 +12,6 @@ const options = {
 // 將 options 傳入構造函數
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-        // ... (這裡的邏輯與你原來的代碼相同) ...
         if (entry.isIntersecting) {
             const img = entry.target;
             const src = img.getAttribute('data-src');

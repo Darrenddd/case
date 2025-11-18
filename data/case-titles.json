@@ -1,10 +1,162 @@
-{
-  "detailed-tianmai": {
-    "title_seo": "天迈设计案例 - 现代极简风格住宅",
-    "title_display": "现代极简风格住宅设计"
+[  
+
+  {
+    "id": "detailed-barbecue",
+    "title_seo": "brand",
+    "title_display": "木屋烧烤 - 卡通形象Logo设计+周边物料"
   },
-  "detailed-3dcar": {
-    "title_seo": "案例二标题 - 某某项目名称",
-    "title_display": "某某项目名称某某项目名称某某项目名称某某项目名称某某项目名称某某项目名称某某项目名称某某项目名称"
+  {
+    "id": "detailed-photovoltaic",
+    "title_seo": "brand",
+    "title_display": "设计案例photovoltaic"
+  },
+  {
+    "id": "detailed-travel",
+    "title_seo": "brand",
+    "title_display": "设计案例travel"
+  },
+
+  {
+    "id": "detailed-kub",
+    "title_seo": "promotion",
+    "title_display": "设计案例kub"
+  },
+  {
+    "id": "detailed-school",
+    "title_seo": "promotion",
+    "title_display": "设计案例school"
+  },
+  {
+    "id": "detailed-wedding",
+    "title_seo": "promotion",
+    "title_display": "设计案例wedding"
+  },
+  {
+    "id": "detailed-yuzhua",
+    "title_seo": "promotion",
+    "title_display": "设计案例yuzhua"
+  },
+
+
+
+
+  {
+    "id": "detailed-3trees",
+    "title_seo": "web",
+    "title_display": "设计案例3trees"
+  },
+  {
+    "id": "detailed-101plus",
+    "title_seo": "web",
+    "title_display": "设计案例101plus"
+  },
+  {
+    "id": "detailed-dipro",
+    "title_seo": "web",
+    "title_display": "设计案例dipro"
+  },
+  {
+    "id": "detailed-kedo",
+    "title_seo": "web",
+    "title_display": "设计案例kedo"
+  },
+  {
+    "id": "detailed-litian",
+    "title_seo": "web",
+    "title_display": "设计案例litian"
+  },
+  {
+    "id": "detailed-yangcong",
+    "title_seo": "web",
+    "title_display": "设计案例yangcong"
+  },
+  {
+    "id": "detailed-yuanqubao",
+    "title_seo": "web",
+    "title_display": "设计案例yuanqubao"
+  },
+
+  {
+    "id": "detailed-hiumall",
+    "title_seo": "ios",
+    "title_display": "设计案例hiumall"
+  },
+  {
+    "id": "detailed-pos",
+    "title_seo": "ios",
+    "title_display": "设计案例pos"
+  },
+
+  {
+    "id": "detailed-chongba",
+    "title_seo": "android",
+    "title_display": "设计案例chongba"
+  },
+  {
+    "id": "detailed-mengxiong",
+    "title_seo": "android",
+    "title_display": "设计案例mengxiong"
+  },
+
+
+
+
+  {
+    "id": "detailed-bigscreen",
+    "title_seo": "video",
+    "title_display": "设计案例bigscreen"
+  },
+  {
+    "id": "detailed-doorwindow",
+    "title_seo": "video",
+    "title_display": "设计案例doorwindow"
+  },
+  {
+    "id": "detailed-finance",
+    "title_seo": "video",
+    "title_display": "设计案例finance"
+  },
+  {
+    "id": "detailed-oral",
+    "title_seo": "video",
+    "title_display": "设计案例oral"
+  },
+  
+  {
+    "id": "detailed-3d",
+    "title_seo": "illustration",
+    "title_display": "设计案例3d"
+  },
+  {
+    "id": "detailed-graduation",
+    "title_seo": "illustration",
+    "title_display": "设计案例graduation"
+  },
+  {
+    "id": "detailed-woman",
+    "title_seo": "illustration",
+    "title_display": "设计案例woman"
+  },
+
+  {
+    "id": "detailed-animation1",
+    "title_seo": "animation",
+    "title_display": "设计案例animation1"
+  },
+  {
+    "id": "detailed-animation2",
+    "title_seo": "animation",
+    "title_display": "设计案例animation2"
+  },
+  {
+    "id": "detailed-animation3",
+    "title_seo": "animation",
+    "title_display": "设计案例animation3"
+  },
+  {
+    "id": "detailed-smarthome",
+    "title_seo": "animation",
+    "title_display": "设计案例smarthome"
   }
-}
+  
+]

@@ -1,15 +1,16 @@
+/* ===========================================
+== 自定义字体
+=========================================== */
 @font-face {
-  /* 1. 自定義字體名稱：這是你將在 font-family 中使用的名字 */
   font-family: 'NotoSansSC'; 
-
-  /* 2. 字體文件的位置 */
   src: url('/fonts/subset-NotoSansSC-ExtraBold.woff2') format('woff2'),
        url('/fonts/subset-NotoSansSC-ExtraBold.woff') format('woff');
-  /* 3. 定義這個文件的字重（標準、粗體等） */
   font-weight: bold; 
-  /* 4. 定義這個文件的字形（正常、斜體） */
   font-style: normal; 
 }
+/* ===========================================
+== 设定风格颜色
+=========================================== */
 :root {
   /* --primary-color:#3effb8; */
   --primary-color:#7bd3e9;
@@ -18,11 +19,15 @@
   --text-red: #EB5939;
   --sidebar-group:#898B8E;
   --sidebar-menu:#cfd4d5;
+  --dialog-background:#2a2a2e;
   /* ... */
 }
+/* ===========================================
+== body
+=========================================== */
 body{
-    overflow-x: hidden; /*隐藏横向滚动条*/
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: var(--text-light);
@@ -30,31 +35,32 @@ body{
     background-color: var(--background-dark);
     background-size: cover;
 }
-/* 1. 外层 Grid：定义左右两栏的宏观结构 */
+/* ===========================================
+== 外层 Grid：定义左右两栏的宏观结构
+=========================================== */
 .page-container {
   display: grid;
   /* 15rem 给侧边栏，1fr 给主内容区 */
   grid-template-columns: 15rem 1fr;
 }
-/*侧边栏*/
+/* ===========================================
+== 侧边栏
+=========================================== */
 .sidebar {
     display: flex;
     flex-direction: column; /* 设置主轴为垂直方向 */
     align-items: flex-start; /* 交叉轴（水平）从左侧开始对齐 */
-
     /* 启用粘性定位 */
     position: sticky;
     /* 规定它“粘住”的位置,当滚动到距离视口顶部0时，它就开始固定 */
     top: 0;
     /* 视口高度的100%,确保侧边栏的高度能覆盖内容区（如果内容区很长） */ 
     height: 100vh;
-
     background-color: #080808;
     border-right:1px solid #333333;
-    /* box-shadow: 0 0.7rem 2.5rem rgb(0 0 0 / 50%); */
 }
 .sidebar .logo{
-    margin:2rem 0 0.8rem 2.5rem;
+    margin:2rem 0 0.8rem 2rem;
     width:3.5rem;
     height:3.5rem;
     border-radius: 50%; 
@@ -67,26 +73,30 @@ body{
 .sidebar .logo:hover{
     filter: brightness(1.1);
 	transition: all 0.3s ease-in-out;
-	margin-left:2.75rem;
+	margin-left:2.3rem;
 }
 .sidebar span{
+    /* 禁用所有主流浏览器中的文本选中功能 */
+    user-select: none;
     margin-top:0.8rem;
     font-size:0.8rem;
     color:var(--text-light);
     padding:0.25rem 0 0.25rem 0;
-    padding-left: 2.5rem;
+    padding-left: 2rem;
 }
-.sidebar a{
+.sidebar .nav-link{
     /* 1. 开启 Flex 布局，让子元素（SVG和文本）排在同一行 */
     display: flex;    
     /* 2. 垂直居中对齐所有子元素 */
     align-items: center;     
     /* 3. （重要）防止元素在宽度不足时换行 */
     flex-wrap: nowrap;
+    /* 禁用所有主流浏览器中的文本选中功能 */
+    user-select: none;
 
     width: 13rem;
     padding:0.3rem 0 0.3rem 0;
-    padding-left: 2.3rem;
+    padding-left: 1.8rem;
     font-size: 1rem;
     font-weight:700;
     color:var(--text-light);
@@ -94,35 +104,29 @@ body{
     border-radius:0 2rem 2rem 0; 
 	transition: all 0.3s ease-in-out;
 }
-.sidebar a:hover{
+.sidebar .nav-link:hover{
     color: #fff;
-    /* color:var(--primary-color); */
     transition: all 0.1s ease-in-out;
+}
+.sidebar .nav-link:active{
+    color: #fff;
 }
 /* 点击后（活跃）的样式 */
 .sidebar .nav-link.active {
-    /* height: 15rem; */
-    /* font-size: 1.1rem; */
-    /* color:var(--primary-color); */
-    /* margin: 0.15rem 0 0.15rem 0; */
-    /* padding-top: 0.3rem;
-    padding-bottom: 0.3rem; */
     color: #fff;
     background:rgba(255,255,255,.2);
     transition: all 0.3s ease-in-out;
 }
 /* 统一图标的尺寸和显示方式 */
 .menu-icon {
-    /* margin-top: -1px; */
     width: 1.5rem;
     height: 1.5rem;
     margin-right: 0.5rem;
 }
 
-
-/*右侧主内容区*/
-
-/*自我介绍*/
+/* ===========================================
+== 右侧主内容区 - 自我介绍
+=========================================== */
 .about-container{
     /* height: 100vh; */
     display: flex;
@@ -176,18 +180,15 @@ body{
 }
 /* 篝火视频 */
 .campfire-area {
-  /* 调整视频容器的大小 */
-  width: 38rem;
-  height: auto; 
-  /* 确保视频内容填满容器，并保持其宽高比 */
-  object-fit: cover; 
-  /* 禁用所有鼠标和触摸事件 */
-    pointer-events: none;
+    width: 38rem;
+    height: auto;
+    object-fit: cover;
+    pointer-events: none; /* 禁用视频所有鼠标和触摸事件 */
 }
 
-
-
-/*内容图片列表*/
+/* ===========================================
+== 右侧主内容区 - 内容图片列表
+=========================================== */
 .content-grid {
     display: grid;
     /*
@@ -203,7 +204,6 @@ body{
     padding: 0 4%;
 
 }
-
 main h2{
     font-size:2rem;
     color:var(--text-light);
@@ -214,7 +214,6 @@ main h2{
 main li{
     margin-bottom: 4rem;
 }
-
 main li a{
     display:block;
     width:100%;
@@ -240,21 +239,11 @@ main li img{
     object-fit: cover;
     border-radius:1.2rem;
 }
-/* .mask {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background: transparent url(/images/pattern_pc.png) repeat top left;
-	opacity: 0.8;
-    z-index: -1;
-} */
 
-/* ------------------------------------------- */
-/* 弹出式窗口来显示html */
-/* ------------------------------------------- */
-/* 关键：强制隐藏滚动条，并防止内容移动 */
+/* ===========================================
+== 弹出式窗口 - 显示html
+=========================================== */
+/* 关键：强制隐藏后面主页面滚动条，并防止内容移动 */
 .modal-active {
     overflow: hidden !important;
     padding-right: 15px; /* 补偿滚动条消失时页面内容的微小移动 (可选) */
@@ -266,69 +255,62 @@ dialog::backdrop {
 }
 /* 2. 可选：iFrame 和 Dialog 的尺寸与样式 */
 #contentDialog {
-    /* 让对话框本身更美观 */
+    position: fixed;
+    bottom: 0;
+    top: auto;
     border: none;
     padding: 0;
-    margin: auto; /* 确保它在 modal 模式下居中 */
+    margin: 0 auto;
     /* 设置最大宽度 */
-    max-width: 90vw; 
+    max-width: 100vw; 
     /* 设置最大高度 */
-    /* max-height: 90vh;  */
+    min-height: 10rem;
+    /* max-height: 100vh;  */
     background: transparent; /* 确保 dialog 本身没有白色背景 */
-    border-radius:1.5rem;
-    box-shadow: 0 -2rem 2rem rgba(255, 255, 255, 0.1);
+    /* border-radius:1rem; */
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    /* box-shadow: 0 -2rem 2rem rgba(255, 255, 255, 0.1); */
+    /* border: 0.1rem solid #ffffff; */
+    /* 保证弹窗没有滚动条，要有滚动条在iframe里，要不然小尺寸分辨率会有两个滚动条 */
+    overflow: hidden;
 }
 #contentDialog #externalFrame {
+    /* 与上面黑色标题栏高度一致，避免内容重叠 */
     margin-top: 3.5rem;
+    padding-left: 0.75rem;
     /* 您想要的 iFrame 宽度 */
-    width: 60vw;
+    /* width: 50vw; */
+    width: 60rem;
     /* 您想要的 iFrame 高度 */
     height: 90vh;
     /* 给 iFrame 内容一个背景 */
-    background-color: rgb(46, 46, 48);
-    /* border-radius:1.1rem; */
-    border-bottom-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-    /* border: 0.1rem solid #2C2C2C; */
+    /* background-color: rgb(46, 46, 48); */
+    background-color: var(--dialog-background);
+    /* border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem; */
 }
 
-/* --- 固定头部样式 --- */
+/* ===========================================
+== 弹出式窗口 - 固定头部样式
+=========================================== */
 /*背景*/
 #contentDialog .fixed-header {
     position: absolute;
     top: 0;
-    /* right: 6px; */
-    /* margin:1rem 2%; */
     width: 100%;
     height: 3.5rem;     
     border-bottom:1px solid rgba(255, 255, 255, .1);
     z-index: 100;
-    
-    /* border-radius: 1rem; */
-    /* background-color: #333338; */
-    background-color: rgba(29, 29, 31, .7);
-    backdrop-filter: saturate(180%) blur(20px);
+    background-color: var(--dialog-background);
+    /* background-color: rgba(29, 29, 31, .7);
+    backdrop-filter: saturate(180%) blur(20px); */
 }
-/* #contentDialog .fixed-header {
-    position: absolute;
-    top: 0;
-    right: 6px;
-    margin:1rem 2%;
-    width: 96%;
-    height: 3.5rem;     
-    border:1px solid rgba(255, 255, 255, .1);
-    z-index: 100;		
-    border-radius: 1rem;
-    background-color: rgba(29, 29, 31, .8);
-    backdrop-filter: saturate(180%) blur(20px);
-} */
+/*头像、标题、关闭按钮的排列*/
 #contentDialog .header-content {
     height: 100%;
-    margin: 0 auto;
     display: flex;
-    /*两端对齐*/
     justify-content: space-between;
-    /*居中对齐*/
     align-items: center;
     gap: 1rem;
     padding: 0 1.2rem;
@@ -336,12 +318,12 @@ dialog::backdrop {
 /*头像*/
 #contentDialog .avatar{
     /* margin:2rem 0 0.8rem 2.5rem; */
-    width:2rem;
-    height:2rem;
+    width:1.8rem;
+    height:1.8rem;
     border-radius: 50%; 
     background: url("/images/logo.png") no-repeat;
     background-color: #7bd3e9;
-    background-size:2rem 2rem;
+    background-size:1.8rem 1.8rem;
     /*不显示点击小手*/
     cursor: default;
     /*确保图标不被挤压*/
@@ -349,9 +331,9 @@ dialog::backdrop {
 }
 /* 标题 */
 #contentDialog .title_display{
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, .8);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-light);
     white-space: nowrap; /* 强制文本不换行 */
     overflow: hidden;    /* 隐藏溢出部分 */
     text-overflow: ellipsis; /* 将溢出部分显示为省略号 (...) */
@@ -362,9 +344,9 @@ dialog::backdrop {
     align-items: center; 
     color: rgba(255, 255, 255, .8);
     font-size: 1rem; 
-    padding: 0.2rem;
+    padding: 0.4rem;
     border-radius: 50%;
-    border:0.1rem solid rgba(255, 255, 255, .8);
+    /* border:0.1rem solid rgba(255, 255, 255, .8); */
     /*确保图标不被挤压*/
     flex-shrink: 0;
 	/* transition: all 0.3s ease-in-out; */
@@ -383,9 +365,9 @@ dialog::backdrop {
 }
 
 
-/* ------------------------------------------- */
-/* 媒体查询：适用于 平板 和 手机 (小于 768px) */
-/* ------------------------------------------- */
+/* ===========================================
+== 媒体查询：适用于 平板 和 手机 (小于 768px)
+=========================================== */
 @media (max-width: 768px) {     
     /* 1. 外层 Grid：改为单列堆叠 */
     .page-container {
