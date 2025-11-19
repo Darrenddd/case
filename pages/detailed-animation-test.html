@@ -9,22 +9,24 @@
 </head>
 <body>
 	<main>
-		<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
-			data-src="/images/animation/animation1/1.webp" 
-			alt="" 
-			class="lazy skeleton-img">
-		<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
-			data-src="/images/animation/animation1/2.webp" 
-			alt="" 
-			class="lazy skeleton-img">
-		<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
-			data-src="/images/animation/animation1/3.webp" 
-			alt="" 
-			class="lazy skeleton-img">
-		<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
-			data-src="/images/animation/animation1/4.webp" 
-			alt="" 
-			class="lazy skeleton-img">
+
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/animation/animation1/1.webp" alt="第一张图" class="lazy-image ">
+		</div>
+
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="lazy-image"
+				data-src="/images/animation/animation1/2.webp"> 
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="lazy-image"
+				data-src="/images/animation/animation1/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="lazy-image"
+				data-src="/images/animation/animation1/4.webp">
+		</div>
+
 			
     </main>
 	<script src="/js/lazy-load.js"></script>

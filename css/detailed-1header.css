@@ -24,7 +24,7 @@ main img{
 /* ===========================================
 == 骨架屏
 =========================================== */
-/* 1. 定义闪烁动画 */
+/* 定义闪烁动画 */
 @keyframes shimmer {
     0% {
         background-position: -100% 0; /* 从左边外侧开始 */
@@ -33,26 +33,44 @@ main img{
         background-position: 200% 0; /* 移动到右边外侧 */
     }
 }
-/* 2. 骨架屏占位图样式 */
-.skeleton-img {
-    /* 继承 img, max-width: 100% 的设置 */
-    width: 100%; 
-    /* 必须设置高度，否则在图片加载前高度为 0 看不到 */
-    /* 假设您的图片比例是 4:3，您可以设置 padding-bottom: 75% 来保持比例 */
-    /* 或者，如果图片高度固定，直接给一个固定高度，例如 */
-    height: 400px; 
+/* 骨架屏容器样式 (应用动画和占位) */
+.lazy-container {
+    width: 100%;
+    /* 保持 4:3 比例占位 */
+    padding-bottom: 75%; 
+    height: 0; 
     
-    background-color: #333333; /* 骨架屏的底色（深色模式下）*/
-    position: relative; /* 确保动画相对于自身 */
-    overflow: hidden; /* 隐藏光束溢出 */
+    background-color: #38383d; /* 骨架屏的底色 */
+    position: relative; 
+    overflow: hidden; 
     
-    /* 闪烁动画背景配置 */
+    /* 闪烁动画配置，现在应用于容器 */
     background: linear-gradient(
         to right,
-        #333333 0%,
-        #444444 50%, /* 闪烁的光亮部分 */
-        #333333 100%
+        #38383d 0%,
+        #404045 50%, 
+        #38383d 100%
     );
     background-size: 200% 100%; 
-    animation: shimmer 1.5s infinite linear;
+    animation: shimmer 3s infinite linear;
 }
+/* 2. 图片在容器内的样式 */
+.lazy-container .lazy-image {
+    position: absolute; /* 使图片浮动在容器上 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* 初始隐藏图片，只显示骨架屏 */
+    transition: opacity 0.3s; /* 添加过渡效果，使其平滑出现 */
+}
+/* 3. 图片加载完成后的样式 */
+.lazy-container.loaded .lazy-image {
+    opacity: 1; /* 图片加载完成后显示 */
+}
+/* 4. 加载完成后的样式：移除动画和背景 */
+.lazy-container.loaded {
+    background: none; /* 图片加载完成后移除动画背景 */
+    animation: none; /* 图片加载完成后停止动画 */
+}
+
