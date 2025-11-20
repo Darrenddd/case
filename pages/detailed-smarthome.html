@@ -5,25 +5,71 @@
 	<title>Design Case</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/reset.css">
-	<link rel="stylesheet" href="/css/detailed-1header.css">
+	<link rel="stylesheet" href="/css/detailed.css">
 </head>
 <body>
 	<main>
-		<img src="/images/animation/smarthome/1.webp" alt="">
-		<img src="/images/placeholder.png" data-src="/images/animation/smarthome/2.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/smarthome/3.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/smarthome/4.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/smarthome/5.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/smarthome/6.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/smarthome/7.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/smarthome/8.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/smarthome/9.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/smarthome/10.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/smarthome/11.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/smarthome/12.webp" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/animation/smarthome/1.webp" alt="" data-width="1500" data-height="2257" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="2579"
+				data-src="/images/animation/smarthome/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="3045"
+				data-src="/images/animation/smarthome/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="3168"
+				data-src="/images/animation/smarthome/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="3498"
+				data-src="/images/animation/smarthome/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="3298"
+				data-src="/images/animation/smarthome/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="1383"
+				data-src="/images/animation/smarthome/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1499" data-height="939"
+				data-src="/images/animation/smarthome/8.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1499" data-height="939"
+				data-src="/images/animation/smarthome/9.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1499" data-height="939"
+				data-src="/images/animation/smarthome/10.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="939"
+				data-src="/images/animation/smarthome/11.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="1050"
+				data-src="/images/animation/smarthome/12.webp">
+		</div>
     </main>
-	<!-- ---- JS ---- -->
-	<!-- 要保证资源加载完才能再加载并执行js文件，要不然没有资源的话js代码无法判断 -->
 	<script src="/js/lazy-load.js"></script>
 </body>
 </html>

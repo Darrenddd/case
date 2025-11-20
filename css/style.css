@@ -125,7 +125,7 @@ body{
     /* left: 0;
     right: 0; */
     
-    margin: 0 2rem 2rem;
+    margin: 0 2rem 3rem;
     padding:0.5rem 0;
     width: 11rem;
     text-align: center;
@@ -318,7 +318,7 @@ dialog::backdrop {
     padding-left: 0.75rem;
     /* 您想要的 iFrame 宽度 */
     /* width: 50vw; */
-    width: 60rem;
+    width: 90rem;
     /* 您想要的 iFrame 高度 */
     height: 90vh;
     /* 给 iFrame 内容一个背景 */

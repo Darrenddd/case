@@ -5,49 +5,246 @@
 	<title>Design Case</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/reset.css">
-	<link rel="stylesheet" href="/css/detailed-1header.css">
+	<link rel="stylesheet" href="/css/detailed.css">
 </head>
 <body>
 	<main>
-		<img src="/images/android/mengxiong/1.jpg" alt="">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/2.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/3.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/4.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/5.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/6.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/7.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/8.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/9.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/10.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/11.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/12.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/13.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/14.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/15.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/16.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/17.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/18.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/19.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/20.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/21.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/22.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/23.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/24.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/25.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/26.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/27.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/28.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/29.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/30.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/31.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/32.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/33.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/34.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/35.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/mengxiong/36.jpg" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/android/mengxiong/1.webp" alt="" data-width="1920" data-height="2000" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1500"
+				data-src="/images/android/mengxiong/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1800"
+				data-src="/images/android/mengxiong/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="2394"
+				data-src="/images/android/mengxiong/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1680"
+				data-src="/images/android/mengxiong/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1372"
+				data-src="/images/android/mengxiong/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="2345"
+				data-src="/images/android/mengxiong/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="2033"
+				data-src="/images/android/mengxiong/8.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1241"
+				data-src="/images/android/mengxiong/9.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1913"
+				data-src="/images/android/mengxiong/10.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1145"
+				data-src="/images/android/mengxiong/11.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="2160"
+				data-src="/images/android/mengxiong/12.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1919"
+				data-src="/images/android/mengxiong/13.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/android/mengxiong/14.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="3153"
+				data-src="/images/android/mengxiong/15.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1032"
+				data-src="/images/android/mengxiong/16.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1080"
+				data-src="/images/android/mengxiong/17.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1761"
+				data-src="/images/android/mengxiong/18.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1448"
+				data-src="/images/android/mengxiong/19.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1912"
+				data-src="/images/android/mengxiong/20.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/android/mengxiong/21.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="2227"
+				data-src="/images/android/mengxiong/22.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/android/mengxiong/23.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="2877"
+				data-src="/images/android/mengxiong/24.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/android/mengxiong/25.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="2169"
+				data-src="/images/android/mengxiong/26.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/android/mengxiong/27.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="3676"
+				data-src="/images/android/mengxiong/28.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1639"
+				data-src="/images/android/mengxiong/29.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/android/mengxiong/30.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/android/mengxiong/31.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="3497"
+				data-src="/images/android/mengxiong/32.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="2186"
+				data-src="/images/android/mengxiong/33.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/android/mengxiong/34.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="4418"
+				data-src="/images/android/mengxiong/35.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/android/mengxiong/36.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1633"
+				data-src="/images/android/mengxiong/37.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/android/mengxiong/38.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1625"
+				data-src="/images/android/mengxiong/39.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/android/mengxiong/40.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1669"
+				data-src="/images/android/mengxiong/41.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="2516"
+				data-src="/images/android/mengxiong/42.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/android/mengxiong/43.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1926"
+				data-src="/images/android/mengxiong/44.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1204"
+				data-src="/images/android/mengxiong/45.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1219"
+				data-src="/images/android/mengxiong/46.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1474"
+				data-src="/images/android/mengxiong/47.webp">
+		</div>
     </main>
-	<!-- ---- JS ---- -->
-	<!-- 要保证资源加载完才能再加载并执行js文件，要不然没有资源的话js代码无法判断 -->
 	<script src="/js/lazy-load.js"></script>
 </body>
 </html>

@@ -5,39 +5,141 @@
 	<title>Design Case</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/reset.css">
-	<link rel="stylesheet" href="/css/detailed-1header.css">
+	<link rel="stylesheet" href="/css/detailed.css">
 </head>
 <body>
 	<main>
-		<img src="/images/android/chongba/1.png" alt="">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/2.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/3.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/4.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/5.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/6.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/7.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/8.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/9.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/10.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/11.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/12.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/13.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/14.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/15.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/16.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/17.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/18.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/19.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/20.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/21.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/22.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/23.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/24.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/25.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/android/chongba/26.png" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/android/chongba/1.webp" alt="" data-width="1920" data-height="1080" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1486"
+				data-src="/images/android/chongba/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1492"
+				data-src="/images/android/chongba/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1354"
+				data-src="/images/android/chongba/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1512"
+				data-src="/images/android/chongba/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1329"
+				data-src="/images/android/chongba/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1675"
+				data-src="/images/android/chongba/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1340"
+				data-src="/images/android/chongba/8.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1510"
+				data-src="/images/android/chongba/9.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1307"
+				data-src="/images/android/chongba/10.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="2075"
+				data-src="/images/android/chongba/11.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1749"
+				data-src="/images/android/chongba/12.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="2099"
+				data-src="/images/android/chongba/13.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1240"
+				data-src="/images/android/chongba/14.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1504"
+				data-src="/images/android/chongba/15.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1950"
+				data-src="/images/android/chongba/16.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1490"
+				data-src="/images/android/chongba/17.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1466"
+				data-src="/images/android/chongba/18.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1493"
+				data-src="/images/android/chongba/19.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1831"
+				data-src="/images/android/chongba/20.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1913" data-height="456"
+				data-src="/images/android/chongba/21.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1913" data-height="1934"
+				data-src="/images/android/chongba/22.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1913" data-height="1477"
+				data-src="/images/android/chongba/23.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1913" data-height="1506"
+				data-src="/images/android/chongba/24.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1913" data-height="1514"
+				data-src="/images/android/chongba/25.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1913" data-height="1777"
+				data-src="/images/android/chongba/26.webp">
+		</div>
     </main>
-	<!-- ---- JS ---- -->
-	<!-- 要保证资源加载完才能再加载并执行js文件，要不然没有资源的话js代码无法判断 -->
 	<script src="/js/lazy-load.js"></script>
 </body>
 </html>

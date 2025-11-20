@@ -5,21 +5,51 @@
 	<title>Design Case</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/reset.css">
-	<link rel="stylesheet" href="/css/detailed-1header.css">
+	<link rel="stylesheet" href="/css/detailed.css">
 </head>
 <body>
 	<main>
-		<img src="/images/animation/animation3/1.jfif" alt="">
-		<img src="/images/placeholder.png" data-src="/images/animation/animation3/2.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/animation3/3.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/animation3/4.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/animation3/5.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/animation3/6.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/animation3/7.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/animation/animation3/8.jfif" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/animation/animation3/1.webp" alt="" data-width="800" data-height="600" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="800" data-height="600"
+				data-src="/images/animation/animation3/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="800" data-height="600"
+				data-src="/images/animation/animation3/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="800" data-height="600"
+				data-src="/images/animation/animation3/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="800" data-height="600"
+				data-src="/images/animation/animation3/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="800" data-height="600"
+				data-src="/images/animation/animation3/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="800" data-height="600"
+				data-src="/images/animation/animation3/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="800" data-height="600"
+				data-src="/images/animation/animation3/8.webp">
+		</div>
     </main>
-	<!-- ---- JS ---- -->
-	<!-- 要保证资源加载完才能再加载并执行js文件，要不然没有资源的话js代码无法判断 -->
 	<script src="/js/lazy-load.js"></script>
 </body>
 </html>
