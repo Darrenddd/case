@@ -9,15 +9,51 @@
 </head>
 <body>
 	<main>
-		<img src="/images/brand/photovoltaic/1.webp" alt="">
-		<img src="/images/placeholder.png" data-src="/images/brand/photovoltaic/2.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/brand/photovoltaic/3.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/brand/photovoltaic/4.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/brand/photovoltaic/5.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/brand/photovoltaic/6.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/brand/photovoltaic/7.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/brand/photovoltaic/8.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/brand/photovoltaic/9.webp" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/brand/photovoltaic/1.webp" alt="" data-width="1920" data-height="1440" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/brand/photovoltaic/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/brand/photovoltaic/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/brand/photovoltaic/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/brand/photovoltaic/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/brand/photovoltaic/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/brand/photovoltaic/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/brand/photovoltaic/8.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1440"
+				data-src="/images/brand/photovoltaic/9.webp">
+		</div>
     </main>
 	<script src="/js/lazy-load.js"></script>
 </body>

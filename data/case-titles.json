@@ -20,11 +20,6 @@
     "title_display": "设计案例guoyuantong"
   },
   {
-    "id": "detailed-tianmai",
-    "title_seo": "uiux",
-    "title_display": "设计案例tianmai"
-  },
-  {
     "id": "detailed-3dcar",
     "title_seo": "uiux",
     "title_display": "设计案例3dcar"
@@ -152,9 +147,9 @@
   },
 
   {
-    "id": "detailed-hiumall",
+    "id": "detailed-tianmai",
     "title_seo": "ios",
-    "title_display": "设计案例hiumall"
+    "title_display": "设计案例tianmai"
   },
   {
     "id": "detailed-pos",

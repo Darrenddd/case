@@ -9,17 +9,66 @@
 </head>
 <body>
 	<main>
-		<img src="/images/illustration/graduation/1.webp" alt="">
-		<img src="/images/placeholder.png" data-src="/images/illustration/graduation/2.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/illustration/graduation/3.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/illustration/graduation/4.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/illustration/graduation/5.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/illustration/graduation/6.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/illustration/graduation/7.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/illustration/graduation/8.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/illustration/graduation/9.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/illustration/graduation/10.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/illustration/graduation/11.webp" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/illustration/graduation/1.webp" alt="" data-width="1280" data-height="768" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1600"
+				data-src="/images/illustration/graduation/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1580"
+				data-src="/images/illustration/graduation/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1594"
+				data-src="/images/illustration/graduation/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1560"
+				data-src="/images/illustration/graduation/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1560"
+				data-src="/images/illustration/graduation/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1580"
+				data-src="/images/illustration/graduation/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1061"
+				data-src="/images/illustration/graduation/8.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="718"
+				data-src="/images/illustration/graduation/9.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1600" data-height="1200"
+				data-src="/images/illustration/graduation/10.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1600" data-height="1200"
+				data-src="/images/illustration/graduation/11.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1600" data-height="1200"
+				data-src="/images/illustration/graduation/12.webp">
+		</div>
     </main>
 	<script src="/js/lazy-load.js"></script>
 </body>
