@@ -318,9 +318,9 @@ dialog::backdrop {
     padding: 0 0.3% 1.6% 1.6%;
     /* 您想要的 iFrame 宽度 */
     /* width: 50vw; */
-    width: 70rem;
+    width: 75rem;
     /* 您想要的 iFrame 高度 */
-    height: 80vh;
+    height: 75vh;
     /* 给 iFrame 内容一个背景 */
     /* background-color: rgb(46, 46, 48); */
     background-color: var(--dialog-background);
