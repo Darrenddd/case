@@ -9,10 +9,46 @@
 </head>
 <body>
 	<main>
-		<img src="/images/promotion/kub/1.webp" alt="">
-		<img src="/images/placeholder.png" data-src="/images/promotion/kub/2.webp" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/promotion/kub/3.jfif" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/promotion/kub/4.webp" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/promotion/kub/1.webp" alt="" data-width="1680" data-height="1326" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1680" data-height="1314"
+				data-src="/images/promotion/kub/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1680" data-height="1605"
+				data-src="/images/promotion/kub/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1680" data-height="1238"
+				data-src="/images/promotion/kub/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1445" data-height="844"
+				data-src="/images/promotion/kub/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1445" data-height="1233"
+				data-src="/images/promotion/kub/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1445" data-height="931"
+				data-src="/images/promotion/kub/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1445" data-height="1255"
+				data-src="/images/promotion/kub/8.webp">
+		</div>
     </main>
 	<script src="/js/lazy-load.js"></script>
 </body>

@@ -9,24 +9,186 @@
 </head>
 <body>
 	<main>
-		<img src="/images/uiux/guoyuantong/1.png" alt="">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/2.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/3.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/4.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/5.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/6.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/7.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/8.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/9.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/10.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/11.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/12.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/13.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/14.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/15.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/16.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/17.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/guoyuantong/18.png" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/uiux/guoyuantong/1.webp" alt="" data-width="1280" data-height="1107" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1472"
+				data-src="/images/uiux/guoyuantong/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1020"
+				data-src="/images/uiux/guoyuantong/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="740"
+				data-src="/images/uiux/guoyuantong/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1211"
+				data-src="/images/uiux/guoyuantong/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1089"
+				data-src="/images/uiux/guoyuantong/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="850"
+				data-src="/images/uiux/guoyuantong/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1395"
+				data-src="/images/uiux/guoyuantong/8.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1241"
+				data-src="/images/uiux/guoyuantong/9.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1808"
+				data-src="/images/uiux/guoyuantong/10.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1273"
+				data-src="/images/uiux/guoyuantong/11.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1653"
+				data-src="/images/uiux/guoyuantong/12.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1368"
+				data-src="/images/uiux/guoyuantong/13.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1206"
+				data-src="/images/uiux/guoyuantong/14.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1008"
+				data-src="/images/uiux/guoyuantong/15.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1072"
+				data-src="/images/uiux/guoyuantong/16.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1125"
+				data-src="/images/uiux/guoyuantong/17.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1248"
+				data-src="/images/uiux/guoyuantong/18.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1421"
+				data-src="/images/uiux/guoyuantong/19.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1970"
+				data-src="/images/uiux/guoyuantong/20.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="900"
+				data-src="/images/uiux/guoyuantong/21.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1217"
+				data-src="/images/uiux/guoyuantong/22.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1283"
+				data-src="/images/uiux/guoyuantong/23.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="980"
+				data-src="/images/uiux/guoyuantong/24.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1208"
+				data-src="/images/uiux/guoyuantong/25.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1292"
+				data-src="/images/uiux/guoyuantong/26.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="980"
+				data-src="/images/uiux/guoyuantong/27.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="980"
+				data-src="/images/uiux/guoyuantong/28.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="2003"
+				data-src="/images/uiux/guoyuantong/29.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1836"
+				data-src="/images/uiux/guoyuantong/30.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1391"
+				data-src="/images/uiux/guoyuantong/31.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1674"
+				data-src="/images/uiux/guoyuantong/32.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1366"
+				data-src="/images/uiux/guoyuantong/33.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1362"
+				data-src="/images/uiux/guoyuantong/34.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1030"
+				data-src="/images/uiux/guoyuantong/35.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1306"
+				data-src="/images/uiux/guoyuantong/36.webp">
+		</div>
     </main>
 	<script src="/js/lazy-load.js"></script>
 </body>

@@ -9,10 +9,71 @@
 </head>
 <body>
 	<main>
-		<img src="/images/web/yuanqubao/1.jpg" alt="">
-		<img src="/images/placeholder.png" data-src="/images/web/yuanqubao/2.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/web/yuanqubao/3.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/web/yuanqubao/4.jpg" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/web/yuanqubao/1.webp" alt="" data-width="1920" data-height="1665" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1636"
+				data-src="/images/web/yuanqubao/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1164"
+				data-src="/images/web/yuanqubao/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1378"
+				data-src="/images/web/yuanqubao/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1416"
+				data-src="/images/web/yuanqubao/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="911"
+				data-src="/images/web/yuanqubao/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1405"
+				data-src="/images/web/yuanqubao/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1450"
+				data-src="/images/web/yuanqubao/8.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1988"
+				data-src="/images/web/yuanqubao/9.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1266"
+				data-src="/images/web/yuanqubao/10.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1126"
+				data-src="/images/web/yuanqubao/11.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="901"
+				data-src="/images/web/yuanqubao/12.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="956"
+				data-src="/images/web/yuanqubao/13.webp">
+		</div>
     </main>
 	<script src="/js/lazy-load.js"></script>
 </body>

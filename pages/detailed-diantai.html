@@ -9,15 +9,61 @@
 </head>
 <body>
 	<main>
-		<img src="/images/uiux/diantai/1.jpg" alt="">
-		<img src="/images/placeholder.png" data-src="/images/uiux/diantai/2.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/diantai/3.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/diantai/4.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/diantai/5.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/diantai/6.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/diantai/7.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/diantai/8.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/diantai/9.jpg" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/uiux/diantai/1.webp" alt="" data-width="1500" data-height="1490" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="1213"
+				data-src="/images/uiux/diantai/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="1838"
+				data-src="/images/uiux/diantai/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="559"
+				data-src="/images/uiux/diantai/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="1369"
+				data-src="/images/uiux/diantai/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="1368"
+				data-src="/images/uiux/diantai/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="920"
+				data-src="/images/uiux/diantai/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="862"
+				data-src="/images/uiux/diantai/8.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="862"
+				data-src="/images/uiux/diantai/9.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="862"
+				data-src="/images/uiux/diantai/10.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1500" data-height="1549"
+				data-src="/images/uiux/diantai/11.webp">
+		</div>
     </main>
 	<script src="/js/lazy-load.js"></script>
 </body>

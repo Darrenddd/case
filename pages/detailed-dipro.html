@@ -9,12 +9,76 @@
 </head>
 <body>
 	<main>
-		<img src="/images/web/dipro/1.jpg" alt="">
-		<img src="/images/placeholder.png" data-src="/images/web/dipro/2.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/web/dipro/3.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/web/dipro/4.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/web/dipro/5.jpg" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/web/dipro/6.jpg" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/web/dipro/1.webp" alt="" data-width="1920" data-height="1711" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1893"
+				data-src="/images/web/dipro/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1220"
+				data-src="/images/web/dipro/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1400" data-height="795"
+				data-src="/images/web/dipro/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1400" data-height="795"
+				data-src="/images/web/dipro/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1400" data-height="795"
+				data-src="/images/web/dipro/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1727"
+				data-src="/images/web/dipro/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1940"
+				data-src="/images/web/dipro/8.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1727"
+				data-src="/images/web/dipro/9.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1782"
+				data-src="/images/web/dipro/10.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1736"
+				data-src="/images/web/dipro/11.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1968"
+				data-src="/images/web/dipro/12.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1765"
+				data-src="/images/web/dipro/13.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1920" data-height="1525"
+				data-src="/images/web/dipro/14.webp">
+		</div>
     </main>
 	<script src="/js/lazy-load.js"></script>
 </body>

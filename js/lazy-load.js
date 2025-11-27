@@ -55,7 +55,7 @@ function handleImageLoading(container) {
 // ===============================================
 
 const options = {
-    rootMargin: '0px 0px 500px 0px',
+    rootMargin: '0px 0px 1000px 0px',
     threshold: 0
 };
 

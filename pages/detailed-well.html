@@ -9,24 +9,101 @@
 </head>
 <body>
 	<main>
-		<img src="/images/uiux/well/1.png" alt="">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/2.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/3.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/4.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/5.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/6.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/7.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/8.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/9.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/10.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/11.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/12.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/13.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/14.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/15.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/16.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/17.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/well/18.png" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/uiux/well/1.webp" alt="" data-width="1280" data-height="800" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/8.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/9.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/10.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/11.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/12.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1137"
+				data-src="/images/uiux/well/13.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="749"
+				data-src="/images/uiux/well/14.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1236"
+				data-src="/images/uiux/well/15.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/16.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/17.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="800"
+				data-src="/images/uiux/well/18.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="810"
+				data-src="/images/uiux/well/19.webp">
+		</div>
     </main>
 	<script src="/js/lazy-load.js"></script>
 </body>

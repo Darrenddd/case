@@ -9,10 +9,66 @@
 </head>
 <body>
 	<main>
-		<img src="/images/uiux/jsjiankangtong/1.png" alt="">
-		<img src="/images/placeholder.png" data-src="/images/uiux/jsjiankangtong/2.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/jsjiankangtong/3.png" alt="" class="lazy">
-		<img src="/images/placeholder.png" data-src="/images/uiux/jsjiankangtong/4.png" alt="" class="lazy">
+		<!-- 首屏第一张图直接加载 -->
+		<div class="image-wrapper lazy-container immediate-load-container"> 
+			<img src="/images/uiux/jsjiankangtong/1.webp" alt="" data-width="1280" data-height="720" class="lazy-image">
+		</div>
+		<!-- 从第二张图开始用JS实现Lazy加载 -->
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1683"
+				data-src="/images/uiux/jsjiankangtong/2.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1896"
+				data-src="/images/uiux/jsjiankangtong/3.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1161"
+				data-src="/images/uiux/jsjiankangtong/4.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1130"
+				data-src="/images/uiux/jsjiankangtong/5.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1060"
+				data-src="/images/uiux/jsjiankangtong/6.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1566"
+				data-src="/images/uiux/jsjiankangtong/7.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1553"
+				data-src="/images/uiux/jsjiankangtong/8.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1994"
+				data-src="/images/uiux/jsjiankangtong/9.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="2300"
+				data-src="/images/uiux/jsjiankangtong/10.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1919"
+				data-src="/images/uiux/jsjiankangtong/11.webp">
+		</div>
+		<div class="image-wrapper lazy-container"> 
+			<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazy-image"
+				alt="" data-width="1280" data-height="1041"
+				data-src="/images/uiux/jsjiankangtong/12.webp">
+		</div>
     </main>
 	<script src="/js/lazy-load.js"></script>
 </body>

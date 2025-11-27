@@ -1,19 +1,26 @@
 /* ===========================================
 == 自定义滚动条
 =========================================== */
-::-webkit-scrollbar {width: 12px;height: 100%;} /* 针对整个滚动条 */
-::-webkit-scrollbar-track {background: #2a2a2e;} /* 滚动条轨道 (背景) */
-::-webkit-scrollbar-thumb {background: #68686A;border-radius: 10px;} /* 滚动条手柄 (拖动部分) */
-::-webkit-scrollbar-thumb:hover {background: #7B7B7D;} /* 鼠标悬停在手柄上时的颜色变化 */
+::-webkit-scrollbar {width: 10px; height: 100%;} /* 针对整个滚动条 */
+::-webkit-scrollbar-track {background-color: rgba(255, 255, 255, 0); border-radius: 10px;} /* 滚动条轨道 (背景) */
+::-webkit-scrollbar-thumb {background: rgba(255, 255, 255, .1);border-radius: 10px;} /* 滚动条手柄 (拖动部分) */
+::-webkit-scrollbar-thumb:hover {background: rgba(255, 255, 255, .2);} /* 鼠标悬停在手柄上时的颜色变化 */
 /* ===========================================
 == 页面内容样式
 =========================================== */
 main{
-    /* padding-top: 0.75rem; */
-    padding: 2rem 15% 0;
+    height: 100%;
+    padding-right: 0.4%;
+    border-radius: 1rem;
+    overflow: hidden;
+    overflow-y: auto;
 }
 main img{
     width:100%;
+}
+main video{
+    max-height: 100vh;
+    border-radius: 20px;
 }
 .video-container{
   width: 100vw;
@@ -22,6 +29,7 @@ main img{
   justify-content: center;  
   align-items: center;
 }
+ 
 /* ===========================================
 == 骨架屏
 =========================================== */
@@ -50,11 +58,11 @@ main img{
     background: linear-gradient(
         to right,
         #38383d 0%,
-        #5c5c61 50%, 
+        #77777d 50%, 
         #38383d 100%
     );
     background-size: 200% 100%; 
-    animation: shimmer 3s infinite linear;
+    animation: shimmer 2s infinite linear;
 }
 /* 2. 图片在容器内的样式 */
 .lazy-container .lazy-image {
