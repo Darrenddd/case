@@ -2,72 +2,72 @@
   {
     "id": "detailed-well",
     "title_seo": "uiux",
-    "title_display": "设计案例well"
+    "title_display": "WELL健康 - 为慢病患者提供康复运动"
   },
   {
     "id": "detailed-diantai",
     "title_seo": "uiux",
-    "title_display": "设计案例diantai"
+    "title_display": "FAFA播客 - 发发大王电台主播小程序"
   },
   {
     "id": "detailed-tuopu",
     "title_seo": "uiux",
-    "title_display": "设计案例tuopu"
+    "title_display": "菜果生鲜 - 实体商超线上营销转化"
   },
   {
     "id": "detailed-guoyuantong",
     "title_seo": "uiux",
-    "title_display": "设计案例guoyuantong"
+    "title_display": "国源通 - 集团内部普惠平台"
   },
   {
     "id": "detailed-3dcar",
     "title_seo": "uiux",
-    "title_display": "设计案例3dcar"
-  },
-  {
-    "id": "detailed-huasheng",
-    "title_seo": "uiux",
-    "title_display": "设计案例huasheng"
-  },
-  {
-    "id": "detailed-hengzhi",
-    "title_seo": "uiux",
-    "title_display": "设计案例hengzhi"
-  },
-  {
-    "id": "detailed-jsjiankangtong",
-    "title_seo": "uiux",
-    "title_display": "设计案例jsjiankangtong"
-  },
-  {
-    "id": "detailed-bohe",
-    "title_seo": "uiux",
-    "title_display": "设计案例bohe"
-  },
-  {
-    "id": "detailed-iflytek",
-    "title_seo": "uiux",
-    "title_display": "设计案例iflytek"
-  },
-  {
-    "id": "detailed-chevrolet",
-    "title_seo": "uiux",
-    "title_display": "设计案例chevrolet"
-  },
-  {
-    "id": "detailed-aidudao",
-    "title_seo": "uiux",
-    "title_display": "设计案例aidudao"
+    "title_display": "有车以后 - 3D看车沉浸式改装互动平台"
   },
   {
     "id": "detailed-lanxin",
     "title_seo": "uiux",
-    "title_display": "设计案例lanxin"
+    "title_display": "兰馨健康 - 医院在线服务平台"
+  },
+  {
+    "id": "detailed-huasheng",
+    "title_seo": "uiux",
+    "title_display": "花生优享 - 社区团购小程序"
+  },
+  {
+    "id": "detailed-chevrolet",
+    "title_seo": "uiux",
+    "title_display": "雪佛兰 - 车机系统设计大赛"
+  },
+  {
+    "id": "detailed-hengzhi",
+    "title_seo": "uiux",
+    "title_display": "恒智学堂 - 内部培训教育平台"
+  },
+  {
+    "id": "detailed-iflytek",
+    "title_seo": "uiux",
+    "title_display": "讯飞智能家居 - 智屏系统UI设计"
+  },
+  {
+    "id": "detailed-jsjiankangtong",
+    "title_seo": "uiux",
+    "title_display": "江苏健康通 - 互联网医院的设计改版"
   },
   {
     "id": "detailed-healthy",
     "title_seo": "uiux",
-    "title_display": "设计案例healthy"
+    "title_display": "HEALTHY - 个人健康管理APP"
+  },
+  {
+    "id": "detailed-aidudao",
+    "title_seo": "uiux",
+    "title_display": "AI督导 - 学院课堂的视频记录"
+  },
+  {
+    "id": "detailed-bohe",
+    "title_seo": "uiux",
+    "title_display": "薄荷健康 - 饮食营养工具APP的升级"
   },
 
   {
@@ -78,34 +78,37 @@
   {
     "id": "detailed-travel",
     "title_seo": "brand",
-    "title_display": "设计案例travel"
+    "title_display": "旅行社宣传海报"
   },
   {
     "id": "detailed-photovoltaic",
     "title_seo": "brand",
-    "title_display": "设计案例photovoltaic"
+    "title_display": "双杰 - 能源行业宣传画册"
   },
 
   {
     "id": "detailed-wedding",
     "title_seo": "promotion",
-    "title_display": "设计案例wedding"
+    "title_display": "囍嫁 - 节日营销活动页"
   },
   {
     "id": "detailed-school",
     "title_seo": "promotion",
-    "title_display": "设计案例school"
+    "title_display": "留学主题趣味玩法推广"
   },
   {
     "id": "detailed-yuzhua",
     "title_seo": "promotion",
-    "title_display": "设计案例yuzhua"
+    "title_display": "鱼爪智企 - 官方商城活动页面"
   },
   {
     "id": "detailed-kub",
     "title_seo": "promotion",
-    "title_display": "设计案例kub"
+    "title_display": "可优比 - 官方旗舰店主题风格装修"
   },
+
+
+
 
 
 
@@ -113,117 +116,123 @@
   {
     "id": "detailed-litian",
     "title_seo": "web",
-    "title_display": "设计案例litian"
+    "title_display": "力田集团 - 多产业布局的集团官网"
   },
   {
     "id": "detailed-kedo",
     "title_seo": "web",
-    "title_display": "设计案例kedo"
+    "title_display": "可豆 - 试管孕育行业个性化定制"
   },
   {
     "id": "detailed-101plus",
     "title_seo": "web",
-    "title_display": "设计案例101plus"
+    "title_display": "101+ - 高端品质家具"
   },
   {
     "id": "detailed-yangcong",
     "title_seo": "web",
-    "title_display": "设计案例yangcong"
+    "title_display": "洋葱集团 - 直播短视频孵化"
   },
   {
     "id": "detailed-dipro",
     "title_seo": "web",
-    "title_display": "设计案例dipro"
+    "title_display": "BIOTIC - 益生菌生物实验室"
   },
   {
     "id": "detailed-3trees",
     "title_seo": "web",
-    "title_display": "设计案例3trees"
+    "title_display": "沃克斯迅达 - 尖端电梯设备提供商"
   },
   {
     "id": "detailed-yuanqubao",
     "title_seo": "web",
-    "title_display": "设计案例yuanqubao"
+    "title_display": "园区宝 - 智慧产业园区服务平台"
   },
 
   {
     "id": "detailed-tianmai",
     "title_seo": "ios",
-    "title_display": "设计案例tianmai"
+    "title_display": "智通 - 智慧车站管理APP"
   },
   {
     "id": "detailed-pos",
     "title_seo": "ios",
-    "title_display": "设计案例pos"
+    "title_display": "腾付通 - 互联网收银商户端APP"
   },
 
   {
     "id": "detailed-chongba",
     "title_seo": "android",
-    "title_display": "设计案例chongba"
+    "title_display": "充吧 - 共享充电宝APP"
   },
   {
     "id": "detailed-mengxiong",
     "title_seo": "android",
-    "title_display": "设计案例mengxiong"
+    "title_display": "趣味课堂 - 在线教育轻学习APP"
   },
 
+
+
+
+
+
+
   {
-    "id": "detailed-video-oral",
+    "id": "detailed-video-bigscreen",
     "title_seo": "video",
-    "title_display": "设计案例oral"
+    "title_display": "利通科技 - 动效概念大屏展示"
   },
   {
     "id": "detailed-video-finance",
     "title_seo": "video",
-    "title_display": "设计案例finance"
+    "title_display": "答税 - APP商业广告视频"
   },
   {
     "id": "detailed-video-doorwindow",
     "title_seo": "video",
-    "title_display": "设计案例doorwindow"
+    "title_display": "凡代克 - 别墅窗品牌宣传片"
   },
   {
-    "id": "detailed-video-bigscreen",
+    "id": "detailed-video-oral",
     "title_seo": "video",
-    "title_display": "设计案例bigscreen"
+    "title_display": "口腔医院宣传片"
   },
   
   {
     "id": "detailed-graduation",
     "title_seo": "illustration",
-    "title_display": "设计案例graduation"
+    "title_display": "活动节日插画"
   },
   {
     "id": "detailed-woman",
     "title_seo": "illustration",
-    "title_display": "设计案例woman"
+    "title_display": "女神节插画设计"
   },
   {
     "id": "detailed-3d",
     "title_seo": "illustration",
-    "title_display": "设计案例3d"
+    "title_display": "四季节日3D插画"
   },
 
   {
     "id": "detailed-animation1",
     "title_seo": "animation",
-    "title_display": "设计案例animation1"
+    "title_display": "配图动效"
   },
   {
     "id": "detailed-animation2",
     "title_seo": "animation",
-    "title_display": "设计案例animation2"
+    "title_display": "配图动效"
   },
   {
     "id": "detailed-animation3",
     "title_seo": "animation",
-    "title_display": "设计案例animation3"
+    "title_display": "配图动效"
   },
   {
     "id": "detailed-smarthome",
     "title_seo": "animation",
-    "title_display": "设计案例smarthome"
+    "title_display": "讯飞智能家居 - 智屏系统动效"
   }
   
 ]
