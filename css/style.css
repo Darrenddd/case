@@ -311,6 +311,30 @@ dialog::backdrop {
     /* 保证弹窗没有滚动条，要有滚动条在iframe里，要不然小尺寸分辨率会有两个滚动条 */
     overflow: hidden;
 }
+/* 弹出窗动画 - 进入 */
+#contentDialog[open]{
+    animation: slide-in 0.2s ease-out forwards;
+}
+/* 弹出窗动画 - 收起状态：当添加 .closing 类时触发 */
+#contentDialog.closing {
+  animation: slide-out 0.2s ease-in forwards;
+  pointer-events: none; /* 防止收起时发生误触 */
+}
+/* 遮罩层渐变 */
+#contentDialog::backdrop {
+  animation: fade-in 0.2s ease-out forwards;
+}
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(50px) scale(0.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes slide-out {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0; transform: translateY(50px) scale(0.9); }
+}
+
+
+
 #contentDialog #externalFrame {
     /* 与上面黑色标题栏高度一致，避免内容重叠 */
     margin-top: 4rem;
@@ -371,9 +395,14 @@ dialog::backdrop {
     font-size: 1rem;
     font-weight: 700;
     color: var(--text-light);
-    white-space: nowrap; /* 强制文本不换行 */
-    overflow: hidden;    /* 隐藏溢出部分 */
-    text-overflow: ellipsis; /* 将溢出部分显示为省略号 (...) */
+    text-align: center;
+
+    /* 强制文本不换行
+    隐藏溢出部分
+    将溢出部分显示为省略号 (...) */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 /* 关闭按钮 */
 #contentDialog #closeBtn { 

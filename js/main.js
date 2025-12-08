@@ -198,7 +198,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- 关闭逻辑 (按钮点击) ---
     closeBtn.addEventListener('click', function() {
-        dialog.close();
+        // 1. 添加动画类
+        dialog.classList.add("closing");
+        // 2. 监听动画结束事件
+        dialog.addEventListener('animationend', function handler() {
+            // 3. 动画播完后：移除类、执行 close、移除监听
+            dialog.classList.remove("closing");
+            dialog.close();
+            dialog.removeEventListener('animationend', handler);
+        }, { once: true });
+        // dialog.close();
         // 恢复滚动和清理 iframe 的操作放到 'close' 事件监听器中统一处理
     });
 
@@ -215,7 +224,15 @@ document.addEventListener('DOMContentLoaded', function() {
             event.clientY < dialogDimensions.top ||
             event.clientY > dialogDimensions.bottom
         ) {
-            dialog.close();
+            // 1. 添加动画类
+            dialog.classList.add("closing");
+            // 2. 监听动画结束事件
+            dialog.addEventListener('animationend', function handler() {
+                // 3. 动画播完后：移除类、执行 close、移除监听
+                dialog.classList.remove("closing");
+                dialog.close();
+                dialog.removeEventListener('animationend', handler);
+            }, { once: true });
         }
     });
 
