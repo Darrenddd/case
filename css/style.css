@@ -203,9 +203,9 @@ body{
 }
 /* 篝火视频 */
 .campfire-area {
-    /* width: 100%;
+    width: 38rem;
     height: auto;
-    aspect-ratio: 16 / 9; */
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     pointer-events: none; /* 禁用视频所有鼠标和触摸事件 */
 }
