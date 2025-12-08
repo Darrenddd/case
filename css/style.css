@@ -312,6 +312,7 @@ dialog::backdrop {
     /* 保证弹窗没有滚动条，要有滚动条在iframe里，要不然小尺寸分辨率会有两个滚动条 */
     overflow: hidden;
 }
+
 /* 弹出窗动画 - 进入 */
 #contentDialog[open]{
     animation: slide-in 0.2s ease-out forwards;
@@ -321,10 +322,16 @@ dialog::backdrop {
   animation: slide-out 0.2s ease-in forwards;
   pointer-events: none; /* 防止收起时发生误触 */
 }
-/* 遮罩层渐变 */
-#contentDialog::backdrop {
+
+/* 遮罩层渐变 - 进入时 */
+#contentDialog[open]::backdrop {
   animation: fade-in 0.2s ease-out forwards;
 }
+/* 遮罩层渐变 - 关闭时：联动宿主的 .closing 类 */
+#contentDialog.closing::backdrop {
+  animation: fade-out 0.2s ease-in forwards;
+}
+
 @keyframes slide-in {
   from { opacity: 0; transform: translateY(50px) scale(0.9); }
   to { opacity: 1; transform: translateY(0) scale(1); }
@@ -332,6 +339,14 @@ dialog::backdrop {
 @keyframes slide-out {
   from { opacity: 1; transform: translateY(0) scale(1); }
   to { opacity: 0; transform: translateY(50px) scale(0.9); }
+}
+@keyframes fade-in {    
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 
