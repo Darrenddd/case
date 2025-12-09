@@ -66,7 +66,8 @@ body{
     height:3.5rem;
     border-radius: 50%; 
     background: url("/images/logo.png") no-repeat;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background-color: #c3c3c6;
     background-size:3.5rem 3.5rem;
     /* cursor: pointer;  */
 	transition: all 0.3s ease-in-out;
@@ -139,6 +140,12 @@ body{
     background-color: rgba(255, 255, 255, .05);
 	transition: all 0.3s ease-in-out;
 	
+}
+.sidebar .footer-link:hover {    
+    /* color: #fff; */
+    /* border: 1px solid rgba(255, 255, 255, .2); */
+    background-color: rgba(255, 255, 255, .1);
+    transition: all 0.3s ease-in-out;
 }
 /* 导航菜单 - 统一图标的尺寸和显示方式 */
 .menu-icon {
@@ -231,7 +238,6 @@ body{
 main h2{
     font-family: 'NotoSansSC', "Arial Black", sans-serif;
     font-size:2rem;
-    /* line-height: 2.7rem; */
     color:var(--text-light);
     padding:7rem 0 4rem 0;
     font-weight: 700;
@@ -262,14 +268,17 @@ main li a{
     border-radius: 1.2rem;
 	transition: all 0.3s ease-in-out;
 	box-shadow: 0 1.25rem 1.25rem rgba(0, 0, 0, 0.1);
-	margin-top: 0.4rem;
+	transform: translateY(0);
+    /* transform: scale(1); */
 	}
 main li a:hover{
     transition: all 0.3s ease-in-out;
     box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.4);
-    /* width: 32rem; */
-	margin-top: 0;
-    filter: brightness(0.7);
+    filter: brightness(1.1);
+	transform: translateY(-0.4rem);
+    /* transform: scale(1.04);
+    z-index: 10;
+    position: relative; */
     }
 main li img{
     width: 100%;
