@@ -16,7 +16,8 @@
   --primary-color:#7bd3e9;
   --background-dark: #000;
   --text-light: #b7ab98;
-  --text-red: #EB5939;
+  /* --text-red: #EB5939; */
+  --text-red:#f04d3e;
   --sidebar-group:#898B8E;
   --sidebar-menu:#cfd4d5;
   --dialog-background:#2a2a2e;
@@ -90,11 +91,9 @@ body{
     width:3.5rem;
     height:3.5rem;
     border-radius: 50%; 
-    background: url("/images/logo.png") no-repeat;
-    /* background-color: var(--primary-color); */
-    background-color: #c3c3c6;
+    background: url("/images/logo.webp") no-repeat;
+    background-color: var(--text-light);
     background-size:3.5rem 3.5rem;
-    /* cursor: pointer;  */
 	transition: all 0.3s ease-in-out;
 }
 .sidebar .logo:hover{
@@ -239,7 +238,8 @@ body{
 }
 /* 篝火视频 */
 .campfire-area {
-    width: 38rem;
+    /* width: 38rem; */
+    width: 44rem;
     height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
@@ -441,8 +441,8 @@ dialog::backdrop {
     width:1.8rem;
     height:1.8rem;
     border-radius: 50%; 
-    background: url("/images/logo.png") no-repeat;
-    background-color: #7bd3e9;
+    background: url("/images/logo.webp") no-repeat;
+    background-color: var(--text-light);
     background-size:1.8rem 1.8rem;
     /*不显示点击小手*/
     cursor: default;
