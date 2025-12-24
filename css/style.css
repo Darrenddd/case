@@ -357,7 +357,8 @@ main li img{
 /* 关键：强制隐藏后面主页面滚动条，并防止内容移动 */
 .modal-active {
     overflow: hidden !important;
-    padding-right: 15px; /* 补偿滚动条消失时页面内容的微小移动 (可选) */
+    /* 补偿滚动条消失时页面内容的微小移动 (可选) */
+    padding-right: 15px; 
 }
 /* 1. 定制全屏遮罩 (Backdrop) */
 dialog::backdrop {
@@ -568,7 +569,11 @@ dialog::backdrop {
     }
     /* 弹窗 - 框架 */
     #contentDialog #externalFrame {
-    padding: 0;
-    height: 90vh;
-}
+        padding: 0;
+        height: 90vh;
+    }
+    /* 关键：强制隐藏后面主页面滚动条，并防止内容移动 */
+    .modal-active {
+        padding-right: 0; 
+    }
 }
