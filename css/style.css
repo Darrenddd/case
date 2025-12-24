@@ -570,7 +570,7 @@ dialog::backdrop {
     /* 弹窗 - 框架 */
     #contentDialog #externalFrame {
         padding: 0;
-        height: 90vh;
+        height: 80vh;
     }
     /* 关键：强制隐藏后面主页面滚动条，并防止内容移动 */
     .modal-active {
