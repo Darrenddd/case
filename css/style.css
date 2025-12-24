@@ -33,7 +33,6 @@ body{
     font-size: 16px;
     line-height: 1.5;
     color: var(--text-light);
-    /* background: var(--background-dark) url(/images/bj.png) center center no-repeat fixed; */
     background-color: var(--background-dark);
     background-size: cover;
 }
@@ -146,11 +145,7 @@ body{
 /* 侧边栏底部链接 (精准定位) 简历*/
 .sidebar .footer-link {
     position: absolute; 
-    bottom: 0;
-    /* 保持左右定位，与父容器的 padding/margin 对齐 */
-    /* left: 0;
-    right: 0; */
-    
+    bottom: 0;    
     margin: 0 2rem 3rem;
     padding:0.5rem 0;
     width: 11rem;
@@ -165,9 +160,7 @@ body{
 	transition: all 0.3s ease-in-out;
 	
 }
-.sidebar .footer-link:hover {    
-    /* color: #fff; */
-    /* border: 1px solid rgba(255, 255, 255, .2); */
+.sidebar .footer-link:hover {
     background-color: rgba(255, 255, 255, .1);
     transition: all 0.3s ease-in-out;
 }
@@ -190,7 +183,7 @@ body{
     align-items: center;
     text-align: center;
 
-    /* 核心：线性渐变 - 从左到右，纯黑色到 rgba(0,0,0,0) */
+    /* 黑色线性渐变遮罩 - 从下到上，纯黑色到 rgba(0,0,0,0) */
     background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0));
     /* 可选：添加边框便于观察色块范围 */
     /* border: 1px solid #ddd; */
@@ -561,6 +554,21 @@ dialog::backdrop {
            让 1fr 完全占据所有可用宽度，消除空白。 */
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); 
         gap: 1rem; /* 卡片之间的间距 */
-        padding: 0 6%;
+        padding: 0 5%;
     }
+
+    /* 弹窗 */
+    #contentDialog {
+        margin-bottom: 0;
+        /* border-radius:1.5rem; */
+        /* border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem; */
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    /* 弹窗 - 框架 */
+    #contentDialog #externalFrame {
+    padding: 0;
+    height: 90vh;
+}
 }
