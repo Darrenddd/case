@@ -186,7 +186,7 @@ body{
     width: auto;
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    /* justify-content:center; */
     align-items: center;
     text-align: center;
 
@@ -197,10 +197,16 @@ body{
 }
 /* 头部文字+按钮 */
 .about-container .header-content{
+    margin: 2vh 10vw;
     z-index: 100;
     font-weight: 700;
-    margin: 6% 20% 2%;
-    text-align: center;
+    align-self: center;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 }
 /* 头部文字+按钮:动画 */
 /* 定义动画轨迹 */
@@ -235,7 +241,10 @@ body{
 .about-container .main-title{
     font-family: 'NotoSansSC', "Arial Black", sans-serif;
     margin-top: 1rem;
-    font-size: 6rem;
+    /* font-size: 6rem; */
+    /* font-size: 10cqw; */
+    /* font-size: 5vw; */
+    font-size: clamp(16px,20cqw,7rem);
     line-height: 110%;
 }
 .about-container .main-title .color-orange{
@@ -243,7 +252,7 @@ body{
 }
 /* 头部按钮 */
 .about-container .view-portfolio{
-    margin-top: 4%;
+    margin-top: 4vh;
     font-size: 1.2rem;
     font-weight: 700;
     color: #000;
@@ -527,11 +536,20 @@ dialog::backdrop {
     }    
     /* 2. 侧边栏 FIX：移除固定定位，使其正常堆叠 */
     .sidebar {
-        position: static; 
-        height: auto; 
+        /* position: static; 
+        height: auto;  */
         /* 手机上可以考虑将导航项居中 */
         align-items: center; 
         /* padding-left: 0; */
+        position: fixed;
+        top: 0;
+        left: -100%; /* 初始隐藏在屏幕左侧外 */
+        width: 100%;  /* 或者根据需要设置宽度 */
+        height: 100vh;
+        transition: transform 0.3s ease; /* 平滑过渡效果 */
+    }
+    .sidebar.active {
+        transform: translateX(100%); /* 点击后滑入 */
     }
     .sidebar a{
         text-align: center;
