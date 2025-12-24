@@ -576,4 +576,8 @@ dialog::backdrop {
     .modal-active {
         padding-right: 0; 
     }
+    /*头像、标题、关闭按钮的排列*/
+    #contentDialog .header-content {
+        padding: 0 0.5rem 0 1rem;
+    }
 }
