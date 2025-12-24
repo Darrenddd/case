@@ -190,7 +190,7 @@ body{
 }
 /* 头部文字+按钮 */
 .about-container .header-content{
-    margin: 2vh 10vw;
+    margin: 2vh 15vw;
     z-index: 100;
     font-weight: 700;
     align-self: center;
@@ -598,5 +598,9 @@ dialog::backdrop {
         font-size: 0.9rem;
         font-weight: 400;
         padding: 0.5rem 1.6rem;
+    }
+    /* 头部文字+按钮 */
+    .about-container .header-content{
+        margin: 2vh 10vw;
     }
 }
