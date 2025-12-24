@@ -582,6 +582,9 @@ dialog::backdrop {
         padding: 0 0.5rem 0 1rem;
     }
 
+    .about-container{
+        height: 90vh;
+    }
     /* 副标题英文 */
     .about-container .subtitle{
         font-size: 1.5rem;
@@ -589,7 +592,6 @@ dialog::backdrop {
     /* 大标题 */
     .about-container .main-title{
         font-size: clamp(16px,18cqw,6rem);
-        line-height: 110%;
     }
     /* 头部按钮 */
     .about-container .view-portfolio{
