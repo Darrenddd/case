@@ -92,6 +92,10 @@ main video{
 @media (max-width: 768px) {
     /* 隐藏弹窗滚动条 */
     ::-webkit-scrollbar {display: none;}
+    main{
+        padding-right: 0;
+        border-radius: 0;
+    }
     
 }
 
