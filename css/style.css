@@ -566,6 +566,7 @@ dialog::backdrop {
         border-top-right-radius: 1.5rem; */
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+        border:0;
     }
     /* 弹窗 - 框架 */
     #contentDialog #externalFrame {
