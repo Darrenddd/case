@@ -15,6 +15,9 @@ main{
     overflow: hidden;
     overflow-y: auto;
 }
+.main-video{
+    padding-right: 1.4%;
+}
 main img{
     width:100%;
 }
@@ -105,7 +108,11 @@ main img{
     main{
         padding-right: 0;
         border-radius: 0;
-    }    
+    }   
+    
+    .main-video{
+        padding-right: 0;
+    } 
     
     .video-js {
         border-radius: 0;

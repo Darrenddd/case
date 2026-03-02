@@ -6,16 +6,38 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/reset.css">
 	<link rel="stylesheet" href="/css/detailed.css">
+	<link href="https://vjs.zencdn.net/7.21.1/video-js.css" rel="stylesheet">
 </head>
 <body>
-	<main>
+	<main class="main-video">
 		<div class="video-container">
-			<video autoplay playsinline controls width="960">
+			<!-- <video autoplay playsinline controls width="960">
+				<source src="/images/video/bigscreen/bigscreen.webm" type="video/webm">
+			</video> -->
+			<video
+				id="bigscreenVideo"
+				class="video-js vjs-big-play-centered vjs-default-skin"
+				playsinline
+				webkit-playsinline
+				preload="auto"
+				width="960"
+				>
 				<source src="/images/video/finance/finance.webm" type="video/webm">
 			</video>
 		</div>
     </main>
 	<!-- ---- JS ---- -->
 	<script src="/js/lazy-load.js"></script>
+	<script src="https://vjs.zencdn.net/7.21.1/video.min.js"></script>
+	<script>
+		var player = videojs('bigscreenVideo', {
+			controls: true,     // 要不要控制条你可以后面关
+			autoplay: false,     // 必须 true
+			muted: false,        // 必须 true
+			preload: 'auto',
+			fluid: true			// 自适应容器
+		});
+	</script>
+
 </body>
 </html>
